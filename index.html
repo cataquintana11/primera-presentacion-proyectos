@@ -8,67 +8,88 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/black.css">
 
   <style>
-    body {
-      font-family: "Inter", -apple-system, sans-serif;
+    :root{
+      --bg: #0b0f14;
+      --card: rgba(255,255,255,0.06);
+      --border: rgba(255,255,255,0.10);
+      --text: #e8eef5;
+      --muted: #8fa0b3;
+      --accent: #5cc8ff;   /* celeste */
+      --accent2:#8b5cf6;   /* violeta */
+      --accent3:#22c55e;   /* verde */
     }
 
-    h1 {
-      font-size: 2.6em;
-      font-weight: 600;
-      letter-spacing: -1px;
-    }
+    body { font-family: "Inter", -apple-system, system-ui, sans-serif; color: var(--text); }
 
-    h2 {
-      font-size: 1.2em;
-      font-weight: 400;
-      color: #aaa;
-    }
+    h1 { font-size: 2.6em; font-weight: 600; letter-spacing: -0.5px; }
+    h2 { font-size: 1.15em; color: var(--muted); font-weight: 400; }
 
-    .grid {
-      display: flex;
-      gap: 25px;
-      margin-top: 40px;
-    }
+    .center { text-align:center; }
+
+    .grid { display:flex; gap:22px; margin-top:34px; }
+    .col { flex:1; }
 
     .card {
-      flex: 1;
-      padding: 25px;
+      padding: 22px;
       border-radius: 14px;
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.08);
+      background: var(--card);
+      border: 1px solid var(--border);
       backdrop-filter: blur(10px);
-      text-align: left;
-      transition: 0.3s;
+      text-align:left;
+      position: relative;
+      overflow: hidden;
     }
 
-    .card:hover {
-      transform: translateY(-5px);
-      border-color: rgba(255,255,255,0.2);
+    /* acento lateral */
+    .card::before{
+      content:"";
+      position:absolute;
+      left:0; top:0; bottom:0;
+      width:4px;
+      background: linear-gradient(var(--accent), var(--accent2));
+      opacity:.9;
     }
 
-    .card h3 {
-      margin-bottom: 10px;
-      font-size: 1.2em;
+    .card h3{
+      font-size: 1.05em;
+      margin-bottom: 8px;
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .card p{
+      font-size: 0.95em;
+      color: var(--muted);
+      line-height: 1.4;
     }
 
     .metric {
-      font-size: 3.5em;
+      font-size: 3.2em;
       font-weight: 700;
+      letter-spacing: -1px;
     }
 
-    .muted {
-      color: #888;
+    .badge{
+      display:inline-block;
+      padding:6px 10px;
+      border-radius:999px;
+      font-size:0.75em;
+      border:1px solid var(--border);
+      color: var(--muted);
+      margin-top:10px;
     }
 
-    .accent {
-      color: #00d4ff;
+    .accent { color: var(--accent); }
+    .accent2 { color: var(--accent2); }
+    .accent3 { color: var(--accent3); }
+
+    .divider{
+      height:1px;
+      background: var(--border);
+      margin: 22px 0;
     }
 
-    .center {
-      text-align: center;
-    }
   </style>
-
 </head>
 
 <body>
@@ -88,64 +109,58 @@
 <section>
   <div class="center">
     <div class="metric accent">~1h/día</div>
-    <h2>Overhead operativo en planificación manual</h2>
+    <h2>Overhead en planificación y gestión operativa</h2>
+    <div class="badge">ineficiencia acumulada</div>
   </div>
 </section>
 
 <section>
-  <h1>Problema Sistémico</h1>
+  <h1>Problema operativo</h1>
+  <h2>Fragmentación + procesos manuales</h2>
 
   <div class="grid">
     <div class="card fragment fade-up">
       <h3 class="accent">Planificación</h3>
-      <p class="muted">Generación manual de rutinas sin reutilización estructurada</p>
+      <p>Creación manual de rutinas sin reutilización ni historial estructurado.</p>
+      <span class="badge">baja eficiencia</span>
     </div>
 
     <div class="card fragment fade-up">
-      <h3 class="accent">Logística</h3>
-      <p class="muted">Desalineación entre recursos físicos y demanda de clases</p>
+      <h3 class="accent2">Logística</h3>
+      <p>Desfase entre disponibilidad de materiales y reservas de clases.</p>
+      <span class="badge">errores operativos</span>
     </div>
 
     <div class="card fragment fade-up">
-      <h3 class="accent">Gestión</h3>
-      <p class="muted">Fragmentación de datos financieros y asistencia</p>
+      <h3 class="accent3">Gestión</h3>
+      <p>Pagos, asistencia y seguimiento distribuidos en múltiples herramientas.</p>
+      <span class="badge">falta de control</span>
     </div>
   </div>
 </section>
 
 <!-- OBJETIVO -->
 <section>
-  <h1>Objetivo del Sistema</h1>
-  <h2>Optimización integral del flujo operativo</h2>
-</section>
+  <h1>Objetivo del sistema</h1>
+  <h2>Centralizar y automatizar la operación completa</h2>
 
-<section>
+  <div class="divider"></div>
+
   <div class="grid">
-    <div class="card fragment fade-up">
-      <h3 class="accent">Eficiencia</h3>
-      <p class="muted">Reducción del tiempo de planificación mediante reutilización</p>
+    <div class="col">
+      <p><span class="accent">Eficiencia:</span> reducción del tiempo de planificación</p>
+      <p><span class="accent2">Automatización:</span> reservas y cupos dinámicos</p>
     </div>
-
-    <div class="card fragment fade-up">
-      <h3 class="accent">Automatización</h3>
-      <p class="muted">Gestión de reservas y cupos en tiempo real</p>
-    </div>
-
-    <div class="card fragment fade-up">
-      <h3 class="accent">Control</h3>
-      <p class="muted">Centralización de métricas operativas y financieras</p>
-    </div>
-
-    <div class="card fragment fade-up">
-      <h3 class="accent">Transparencia</h3>
-      <p class="muted">Acceso del usuario final a su información en tiempo real</p>
+    <div class="col">
+      <p><span class="accent3">Control:</span> métricas centralizadas</p>
+      <p><span class="accent">Transparencia:</span> acceso del alumno en tiempo real</p>
     </div>
   </div>
 </section>
 
 <!-- SOLUCION -->
 <section>
-  <h1>Arquitectura de Solución</h1>
+  <h1>Arquitectura de solución</h1>
   <h2>Plataforma modular integrada</h2>
 </section>
 
@@ -153,50 +168,50 @@
   <div class="grid">
     <div class="card fragment fade-up">
       <h3 class="accent">Training Engine</h3>
-      <p class="muted">Motor de generación de rutinas basado en biblioteca estructurada</p>
+      <p>Biblioteca estructurada + generación rápida de rutinas reutilizables.</p>
+      <span class="badge">core funcional</span>
     </div>
 
     <div class="card fragment fade-up">
-      <h3 class="accent">Booking System</h3>
-      <p class="muted">Asignación dinámica de cupos en función de recursos disponibles</p>
+      <h3 class="accent2">Booking System</h3>
+      <p>Asignación automática de cupos según disponibilidad de recursos.</p>
+      <span class="badge">tiempo real</span>
     </div>
   </div>
-</section>
 
-<section>
   <div class="grid">
     <div class="card fragment fade-up">
-      <h3 class="accent">Admin Dashboard</h3>
-      <p class="muted">Visualización de ingresos, asistencia y métricas clave</p>
+      <h3 class="accent3">Admin Dashboard</h3>
+      <p>Visualización de ingresos, asistencia y KPIs operativos.</p>
+      <span class="badge">analytics</span>
     </div>
 
     <div class="card fragment fade-up">
       <h3 class="accent">User App</h3>
-      <p class="muted">Seguimiento de progreso, reservas activas y estado financiero</p>
+      <p>Seguimiento de progreso, reservas activas y estado financiero.</p>
+      <span class="badge">experiencia usuario</span>
     </div>
   </div>
 </section>
 
 <!-- IMPACTO -->
 <section>
-  <h1>Impacto y Posicionamiento</h1>
-</section>
+  <h1>Impacto en el mercado</h1>
 
-<section>
   <div class="grid">
     <div class="card fragment fade-up">
       <h3 class="accent">Profesionalización</h3>
-      <p class="muted">Estandarización de procesos operativos</p>
+      <p>Estandarización de procesos y mejora en la calidad del servicio.</p>
     </div>
 
     <div class="card fragment fade-up">
-      <h3 class="accent">Mercado</h3>
-      <p class="muted">Baja saturación en soluciones especializadas</p>
+      <h3 class="accent2">Oportunidad</h3>
+      <p>Mercado con baja especialización en soluciones integradas.</p>
     </div>
 
     <div class="card fragment fade-up">
-      <h3 class="accent">Escalabilidad</h3>
-      <p class="muted">Modelo adaptable a múltiples centros y disciplinas</p>
+      <h3 class="accent3">Escalabilidad</h3>
+      <p>Modelo replicable en múltiples centros y disciplinas.</p>
     </div>
   </div>
 </section>
@@ -204,16 +219,22 @@
 <!-- CIERRE -->
 <section>
   <div class="center">
-    <h1 class="accent">Sistema > Herramienta</h1>
-    <h2 class="fragment fade-in">Optimización, control y escalabilidad en una sola plataforma</h2>
-  </div>
-</section>
+    <h1 class="accent">Sistema integral</h1>
+    <h2 class="fragment fade-in">optimiza, automatiza y escala la operación</h2>
 
-<section>
-  <div class="center">
-    <div class="metric">Eficiente</div>
-    <div class="metric fragment fade-in">Escalable</div>
-    <div class="metric fragment fade-in">Profesional</div>
+    <div class="divider"></div>
+
+    <div class="grid">
+      <div class="col">
+        <p class="accent">↓ tiempo operativo</p>
+      </div>
+      <div class="col">
+        <p class="accent2">↑ control y métricas</p>
+      </div>
+      <div class="col">
+        <p class="accent3">↑ calidad del servicio</p>
+      </div>
+    </div>
   </div>
 </section>
 
