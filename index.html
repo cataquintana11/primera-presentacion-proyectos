@@ -5,51 +5,63 @@
   <title>Presentación</title>
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/white.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/black.css">
 
   <style>
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-family: "Inter", -apple-system, sans-serif;
     }
 
     h1 {
       font-size: 2.6em;
       font-weight: 600;
-      margin-bottom: 20px;
+      letter-spacing: -1px;
     }
 
     h2 {
-      font-size: 1.4em;
+      font-size: 1.2em;
       font-weight: 400;
-      color: #555;
+      color: #aaa;
     }
 
     .grid {
       display: flex;
-      justify-content: space-between;
-      gap: 40px;
+      gap: 25px;
       margin-top: 40px;
     }
 
     .card {
       flex: 1;
       padding: 25px;
-      border-radius: 16px;
-      background: #f7f7f7;
+      border-radius: 14px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      backdrop-filter: blur(10px);
       text-align: left;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(255,255,255,0.2);
     }
 
     .card h3 {
       margin-bottom: 10px;
+      font-size: 1.2em;
     }
 
-    .big {
-      font-size: 3em;
+    .metric {
+      font-size: 3.5em;
       font-weight: 700;
     }
 
     .muted {
-      color: #666;
+      color: #888;
+    }
+
+    .accent {
+      color: #00d4ff;
     }
 
     .center {
@@ -72,80 +84,81 @@
 <section><h1>Libre 6</h1></section>
 <section><h1>Libre 7</h1></section>
 
-<!-- 1 PROBLEMA -->
+<!-- PROBLEMA -->
 <section>
   <div class="center">
-    <div class="big">1 hora</div>
-    <h2 class="muted">perdida por día en planificación</h2>
+    <div class="metric accent">~1h/día</div>
+    <h2>Overhead operativo en planificación manual</h2>
   </div>
 </section>
 
 <section>
-  <h1>El problema no es uno</h1>
+  <h1>Problema Sistémico</h1>
 
   <div class="grid">
     <div class="card fragment fade-up">
-      <h3>Tiempo</h3>
-      <p>Planificación manual y repetitiva</p>
+      <h3 class="accent">Planificación</h3>
+      <p class="muted">Generación manual de rutinas sin reutilización estructurada</p>
     </div>
 
     <div class="card fragment fade-up">
-      <h3>Logística</h3>
-      <p>Clases que fallan por materiales</p>
+      <h3 class="accent">Logística</h3>
+      <p class="muted">Desalineación entre recursos físicos y demanda de clases</p>
     </div>
 
     <div class="card fragment fade-up">
-      <h3>Gestión</h3>
-      <p>Pagos y alumnos desorganizados</p>
+      <h3 class="accent">Gestión</h3>
+      <p class="muted">Fragmentación de datos financieros y asistencia</p>
     </div>
   </div>
 </section>
 
-<!-- 2 OBJETIVO -->
+<!-- OBJETIVO -->
 <section>
-  <h1>Objetivo</h1>
-  <h2 class="muted">Simplificar toda la operación en un solo sistema</h2>
-</section>
-
-<section>
-  <div class="grid">
-    <div class="card fragment fade-up">
-      <h3>Eficiencia</h3>
-      <p>Menos tiempo, mejores clases</p>
-    </div>
-
-    <div class="card fragment fade-up">
-      <h3>Agilidad</h3>
-      <p>Reservas y pagos simples</p>
-    </div>
-
-    <div class="card fragment fade-up">
-      <h3>Control</h3>
-      <p>Datos claros y centralizados</p>
-    </div>
-
-    <div class="card fragment fade-up">
-      <h3>Transparencia</h3>
-      <p>El alumno ve todo</p>
-    </div>
-  </div>
-</section>
-
-<!-- 3 SOLUCION -->
-<section>
-  <h1>Un sistema, todo conectado</h1>
+  <h1>Objetivo del Sistema</h1>
+  <h2>Optimización integral del flujo operativo</h2>
 </section>
 
 <section>
   <div class="grid">
     <div class="card fragment fade-up">
-      <h3>Entrenamientos</h3>
-      <p>Planificación rápida con biblioteca</p>
+      <h3 class="accent">Eficiencia</h3>
+      <p class="muted">Reducción del tiempo de planificación mediante reutilización</p>
     </div>
 
     <div class="card fragment fade-up">
-      <h3>Reservas</h3>
-      <p>Cupos automáticos según recursos</p>
+      <h3 class="accent">Automatización</h3>
+      <p class="muted">Gestión de reservas y cupos en tiempo real</p>
+    </div>
+
+    <div class="card fragment fade-up">
+      <h3 class="accent">Control</h3>
+      <p class="muted">Centralización de métricas operativas y financieras</p>
+    </div>
+
+    <div class="card fragment fade-up">
+      <h3 class="accent">Transparencia</h3>
+      <p class="muted">Acceso del usuario final a su información en tiempo real</p>
+    </div>
+  </div>
+</section>
+
+<!-- SOLUCION -->
+<section>
+  <h1>Arquitectura de Solución</h1>
+  <h2>Plataforma modular integrada</h2>
+</section>
+
+<section>
+  <div class="grid">
+    <div class="card fragment fade-up">
+      <h3 class="accent">Training Engine</h3>
+      <p class="muted">Motor de generación de rutinas basado en biblioteca estructurada</p>
+    </div>
+
+    <div class="card fragment fade-up">
+      <h3 class="accent">Booking System</h3>
+      <p class="muted">Asignación dinámica de cupos en función de recursos disponibles</p>
     </div>
   </div>
 </section>
@@ -153,54 +166,54 @@
 <section>
   <div class="grid">
     <div class="card fragment fade-up">
-      <h3>Dashboard</h3>
-      <p>Finanzas y control total</p>
+      <h3 class="accent">Admin Dashboard</h3>
+      <p class="muted">Visualización de ingresos, asistencia y métricas clave</p>
     </div>
 
     <div class="card fragment fade-up">
-      <h3>App Alumno</h3>
-      <p>Progreso, clases y pagos</p>
+      <h3 class="accent">User App</h3>
+      <p class="muted">Seguimiento de progreso, reservas activas y estado financiero</p>
     </div>
   </div>
 </section>
 
-<!-- 4 IMPACTO -->
+<!-- IMPACTO -->
 <section>
-  <h1>Impacto</h1>
+  <h1>Impacto y Posicionamiento</h1>
 </section>
 
 <section>
   <div class="grid">
     <div class="card fragment fade-up">
-      <h3>Profesionalización</h3>
-      <p>De informal a sistema estructurado</p>
+      <h3 class="accent">Profesionalización</h3>
+      <p class="muted">Estandarización de procesos operativos</p>
     </div>
 
     <div class="card fragment fade-up">
-      <h3>Mercado</h3>
-      <p>Poca competencia real</p>
+      <h3 class="accent">Mercado</h3>
+      <p class="muted">Baja saturación en soluciones especializadas</p>
     </div>
 
     <div class="card fragment fade-up">
-      <h3>Escalabilidad</h3>
-      <p>Adaptable a distintos centros</p>
+      <h3 class="accent">Escalabilidad</h3>
+      <p class="muted">Modelo adaptable a múltiples centros y disciplinas</p>
     </div>
   </div>
 </section>
 
-<!-- 5 CIERRE -->
+<!-- CIERRE -->
 <section>
   <div class="center">
-    <h1>Más que una herramienta</h1>
-    <h2 class="fragment fade-in">Es una mejora completa de la experiencia</h2>
+    <h1 class="accent">Sistema > Herramienta</h1>
+    <h2 class="fragment fade-in">Optimización, control y escalabilidad en una sola plataforma</h2>
   </div>
 </section>
 
 <section>
   <div class="center">
-    <div class="big">Simple</div>
-    <div class="big fragment fade-in">Profesional</div>
-    <div class="big fragment fade-in">Escalable</div>
+    <div class="metric">Eficiente</div>
+    <div class="metric fragment fade-in">Escalable</div>
+    <div class="metric fragment fade-in">Profesional</div>
   </div>
 </section>
 
