@@ -8,88 +8,107 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/black.css">
 
   <style>
-    :root{
-      --bg: #0b0f14;
-      --card: rgba(255,255,255,0.06);
-      --border: rgba(255,255,255,0.10);
-      --text: #e8eef5;
-      --muted: #8fa0b3;
-      --accent: #5cc8ff;   /* celeste */
-      --accent2:#8b5cf6;   /* violeta */
-      --accent3:#22c55e;   /* verde */
-    }
+  :root{
+    --bg: #0b0f14;
+    --card: rgba(255,255,255,0.06);
+    --border: rgba(255,255,255,0.10);
+    --text: #e8eef5;
+    --muted: #8fa0b3;
 
-    body { font-family: "Inter", -apple-system, system-ui, sans-serif; color: var(--text); }
+    /* 🎨 nuevo acento cremita */
+    --accent: #f5e6c8;
+    --accent2:#e6d3a3;
+    --accent3:#d4b483;
+  }
 
-    h1 { font-size: 2.6em; font-weight: 600; letter-spacing: -0.5px; }
-    h2 { font-size: 1.15em; color: var(--muted); font-weight: 400; }
+  body {
+    font-family: "Inter", -apple-system, system-ui, sans-serif;
+    color: var(--text);
+  }
 
-    .center { text-align:center; }
+  h1 {
+    font-size: 2.6em;
+    font-weight: 600;
+  }
 
-    .grid { display:flex; gap:22px; margin-top:34px; }
-    .col { flex:1; }
+  h2 {
+    font-size: 1.1em;
+    color: var(--muted);
+    font-weight: 400;
+  }
 
-    .card {
-      padding: 22px;
-      border-radius: 14px;
-      background: var(--card);
-      border: 1px solid var(--border);
-      backdrop-filter: blur(10px);
-      text-align:left;
-      position: relative;
-      overflow: hidden;
-    }
+  .center {
+    text-align:center;
+  }
 
-    /* acento lateral */
-    .card::before{
-      content:"";
-      position:absolute;
-      left:0; top:0; bottom:0;
-      width:4px;
-      background: linear-gradient(var(--accent), var(--accent2));
-      opacity:.9;
-    }
+  /* 🔥 GRID CORREGIDO (no se rompe más) */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-    .card h3{
-      font-size: 1.05em;
-      margin-bottom: 8px;
-      color: var(--text);
-      font-weight: 600;
-    }
+  .col {
+    text-align: left;
+  }
 
-    .card p{
-      font-size: 0.95em;
-      color: var(--muted);
-      line-height: 1.4;
-    }
+  .card {
+    padding: 20px;
+    border-radius: 14px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    text-align:left;
+    position: relative;
+  }
 
-    .metric {
-      font-size: 3.2em;
-      font-weight: 700;
-      letter-spacing: -1px;
-    }
+  /* línea lateral cremita */
+  .card::before{
+    content:"";
+    position:absolute;
+    left:0; top:0; bottom:0;
+    width:4px;
+    background: linear-gradient(var(--accent), var(--accent2));
+  }
 
-    .badge{
-      display:inline-block;
-      padding:6px 10px;
-      border-radius:999px;
-      font-size:0.75em;
-      border:1px solid var(--border);
-      color: var(--muted);
-      margin-top:10px;
-    }
+  .card h3{
+    font-size: 1em;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--accent);
+  }
 
-    .accent { color: var(--accent); }
-    .accent2 { color: var(--accent2); }
-    .accent3 { color: var(--accent3); }
+  .card p{
+    font-size: 0.9em;
+    color: var(--muted);
+  }
 
-    .divider{
-      height:1px;
-      background: var(--border);
-      margin: 22px 0;
-    }
+  .metric {
+    font-size: 3em;
+    font-weight: 700;
+    color: var(--accent);
+  }
 
-  </style>
+  .badge{
+    display:inline-block;
+    padding:5px 10px;
+    border-radius:999px;
+    font-size:0.7em;
+    border:1px solid var(--border);
+    color: var(--muted);
+    margin-top:8px;
+  }
+
+  .divider{
+    height:1px;
+    background: var(--border);
+    margin: 20px auto;
+    max-width: 600px;
+  }
+</style>
 </head>
 
 <body>
