@@ -1,0 +1,85 @@
+:root{
+  --bg: #fdfaf5;
+  --card: #fffaf0;
+  --border: #e8dcc7;
+
+  --text: #2a2a2a;
+  --muted: #7a746a;
+
+  --accent: #d6b98c;
+  --accent-strong: #b89b6b;
+}
+
+body {
+  font-family: "Inter", -apple-system, sans-serif;
+}
+
+h1 {
+  font-size: 2.4em;
+  font-weight: 600;
+  color: var(--text);
+}
+
+h2 {
+  font-size: 1.1em;
+  color: var(--muted);
+  font-weight: 400;
+}
+
+.center {
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+  max-width: 950px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 22px;
+  border-radius: 14px;
+  text-align: left;
+  position: relative;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: var(--accent);
+}
+
+.card h3 {
+  font-size: 1.05em;
+  margin-bottom: 8px;
+  color: var(--accent-strong);
+}
+
+.card p {
+  font-size: 0.95em;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+.metric {
+  font-size: 3em;
+  font-weight: 700;
+  color: var(--accent-strong);
+}
+
+.divider {
+  height: 1px;
+  background: var(--border);
+  margin: 25px auto;
+  max-width: 600px;
+}
