@@ -5,24 +5,58 @@
   <title>Presentación</title>
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/black.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/white.css">
 
   <style>
-    h1, h2, p, li {
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      font-weight: 600;
+    }
+
+    h2 {
+      font-size: 1.8em;
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.2em;
+      color: #444;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      font-size: 1.2em;
+      margin: 12px 0;
+      color: #333;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
       text-align: center;
     }
-    ul {
-      list-style-position: inside;
+
+    .highlight {
+      font-weight: 600;
+      color: black;
     }
   </style>
-
 </head>
 
 <body>
 <div class="reveal">
 <div class="slides">
 
-<!-- 🔹 7 SLIDES LIBRES -->
+<!-- 🔹 LIBRES -->
 <section><h1>Libre 1</h1></section>
 <section><h1>Libre 2</h1></section>
 <section><h1>Libre 3</h1></section>
@@ -31,54 +65,80 @@
 <section><h1>Libre 6</h1></section>
 <section><h1>Libre 7</h1></section>
 
-<!-- 🔥 PRESENTACIÓN DEL PROYECTO -->
-
+<!-- 🔥 DIAPO 1 -->
 <section>
-  <h1>🏋️ El Desafío del Profesor</h1>
+  <div class="container">
+    <h1>El problema actual</h1>
+    <p>La gestión de clases y alumnos sigue siendo manual, fragmentada y poco eficiente.</p>
+    <ul>
+      <li><span class="highlight">Tiempo:</span> hasta 1 hora diaria en planificación</li>
+      <li><span class="highlight">Logística:</span> reprogramaciones por falta de materiales</li>
+      <li><span class="highlight">Gestión:</span> desorden en pagos y seguimiento</li>
+    </ul>
+  </div>
 </section>
 
+<!-- 🔥 DIAPO 2 -->
 <section>
-  <h2>⏱️ Tiempo</h2>
-  <p>Se pierde hasta 1 hora diaria planificando clases</p>
+  <div class="container">
+    <h1>Objetivo del proyecto</h1>
+    <p>Optimizar la gestión completa del entrenamiento en un solo sistema.</p>
+    <ul>
+      <li>Eficiencia en la planificación</li>
+      <li>Reservas y pagos sin fricción</li>
+      <li>Control claro de asistencia y finanzas</li>
+      <li>Acceso transparente para el alumno</li>
+    </ul>
+  </div>
 </section>
 
+<!-- 🔥 DIAPO 3 -->
 <section>
-  <h2>📦 Logística</h2>
-  <p>Falta de materiales → reprogramaciones</p>
+  <div class="container">
+    <h1>La solución</h1>
+    <p>Un ecosistema digital integrado que centraliza toda la operación.</p>
+    <ul>
+      <li>Gestor de entrenamientos</li>
+      <li>Sistema de reservas inteligente</li>
+      <li>Dashboard administrativo</li>
+      <li>Aplicación para alumnos</li>
+    </ul>
+  </div>
 </section>
 
+<!-- 🔥 DIAPO 4 -->
 <section>
-  <h2>📊 Gestión</h2>
-  <p>Herramientas ineficientes y desorganización</p>
+  <div class="container">
+    <h1>Cómo funciona</h1>
+    <ul>
+      <li>El profesor planifica en minutos usando una biblioteca de ejercicios</li>
+      <li>El sistema gestiona cupos automáticamente</li>
+      <li>Los alumnos reservan y pagan desde la app</li>
+      <li>Todo queda registrado y organizado en un solo lugar</li>
+    </ul>
+  </div>
 </section>
 
+<!-- 🔥 DIAPO 5 -->
 <section>
-  <h1>🎯 Nuestra Meta</h1>
-  <ul>
-    <li>Eficiencia en planificación</li>
-    <li>Reservas simples</li>
-    <li>Control total</li>
-    <li>Transparencia para alumnos</li>
-  </ul>
+  <div class="container">
+    <h1>Valor diferencial</h1>
+    <ul>
+      <li>Experiencia simple y profesional</li>
+      <li>Enfoque en motivación y seguimiento del alumno</li>
+      <li>Baja competencia directa en el mercado</li>
+      <li>Escalable a distintos tipos de entrenamiento</li>
+    </ul>
+  </div>
 </section>
 
+<!-- 🔥 DIAPO 6 -->
 <section>
-  <h1>💻 Solución</h1>
-  <ul>
-    <li>Gestor de entrenamientos</li>
-    <li>Reservas inteligentes</li>
-    <li>Dashboard administrativo</li>
-    <li>App del alumno</li>
-  </ul>
-</section>
-
-<section>
-  <h1>🚀 Impacto</h1>
-  <ul>
-    <li>Experiencia más profesional</li>
-    <li>Mercado con poca competencia</li>
-    <li>Servicio más eficiente y escalable</li>
-  </ul>
+  <div class="container">
+    <h1>Conclusión</h1>
+    <p>No solo optimiza procesos, transforma la experiencia completa.</p>
+    <p class="highlight">De un sistema informal → a un servicio profesional, eficiente y escalable.</p>
+  </div>
 </section>
 
 </div>
@@ -86,7 +146,11 @@
 
 <script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
 <script>
-  Reveal.initialize();
+  Reveal.initialize({
+    transition: "fade",
+    controls: true,
+    progress: true
+  });
 </script>
 
 </body>
