@@ -66,7 +66,7 @@ html,body{
 .dot{width:6px;height:6px;border-radius:50%;background:rgba(196,164,107,.4);cursor:pointer;transition:all .2s}
 .dot.on{background:var(--amber2);transform:scale(1.5)}
 
-/* ── COMMON TYPO (todo color ink por defecto) ── */
+/* ── COMMON TYPO ── */
 .tag{
   font-family:var(--font-display);font-size:.95rem;
   font-weight:600;letter-spacing:.18em;
@@ -89,9 +89,10 @@ html,body{
 
 ::-webkit-scrollbar{width:5px}
 ::-webkit-scrollbar-thumb{background:rgba(196,164,107,.4);border-radius:5px}
+::-webkit-scrollbar-track{background:transparent}
 
 /* =====================================================
-   S1 + S12 — CARÁTULA / CIERRE (idénticas)
+   S1 + S12 — CARÁTULA / CIERRE
    ===================================================== */
 #s1, #s12{
   background:var(--cream2);
@@ -104,7 +105,6 @@ html,body{
 }
 #s1 .eyebrow, #s12 .eyebrow{display:flex;align-items:center;gap:14px;margin-bottom:20px}
 #s1 .eyebrow span, #s12 .eyebrow span{width:32px;height:1.5px;background:var(--amber)}
-
 #s1 .sub, #s12 .sub{
   font-size:1.4rem;color:var(--mid);margin-top:18px;
   font-weight:400;max-width:680px;line-height:1.5;
@@ -204,6 +204,8 @@ html,body{
    ===================================================== */
 #s4{background:var(--paper);color:var(--ink)}
 #s4 .inner{height:100%;display:flex;flex-direction:column;padding:50px 70px 100px;overflow-y:auto}
+#s4 .h2{color:var(--ink) !important}
+#s4 .tag{color:var(--amber) !important}
 #s4 .sgrid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px;flex:1}
 #s4 .spanel{
   background:var(--cream2);border:1px solid rgba(196,164,107,.3);
@@ -211,7 +213,7 @@ html,body{
 }
 #s4 .spt{
   font-family:var(--font-display);font-size:.95rem;font-weight:600;
-  letter-spacing:.16em;text-transform:uppercase;color:var(--amber);
+  letter-spacing:.16em;text-transform:uppercase;color:var(--rust);
   padding-bottom:10px;border-bottom:1px solid rgba(196,164,107,.25);margin-bottom:4px;
 }
 #s4 .si{
@@ -275,6 +277,8 @@ html,body{
    ===================================================== */
 #s7{background:var(--cream2);color:var(--ink)}
 #s7 .inner{height:100%;display:flex;flex-direction:column;padding:48px 64px 100px;overflow-y:auto}
+#s7 .h2{color:var(--ink) !important}
+#s7 .tag{color:var(--rust) !important}
 #s7 .og{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:18px;flex:1}
 #s7 .okr{
   background:var(--paper);border:1px solid rgba(196,164,107,.3);
@@ -334,6 +338,8 @@ html,body{
    ===================================================== */
 #s9{background:var(--cream2);color:var(--ink)}
 #s9 .inner{height:100%;display:flex;flex-direction:column;padding:48px 64px 100px;overflow-y:auto}
+#s9 .h2{color:var(--ink) !important}
+#s9 .tag{color:var(--amber) !important}
 #s9 .dual{display:grid;grid-template-columns:1.1fr 1fr;gap:18px;margin-top:18px;flex:1}
 #s9 .tp{
   background:var(--paper);border:1px solid rgba(196,164,107,.3);
@@ -341,7 +347,7 @@ html,body{
 }
 #s9 .tpt{
   font-family:var(--font-display);font-size:.95rem;font-weight:600;
-  letter-spacing:.16em;text-transform:uppercase;color:var(--amber);
+  letter-spacing:.16em;text-transform:uppercase;color:var(--rust);
   padding-bottom:10px;border-bottom:1px solid rgba(196,164,107,.25);
 }
 #s9 .sw{display:flex;flex-direction:column;gap:3px;padding:11px 0;border-bottom:1px solid rgba(196,164,107,.18)}
@@ -362,15 +368,139 @@ html,body{
 }
 
 /* =====================================================
-   S10 — GANTT (placeholder)
+   S10 — GANTT
    ===================================================== */
 #s10{background:var(--paper);color:var(--ink)}
-#s10 .inner{height:100%;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:50px 70px 100px;gap:18px}
-#s10 .ph{text-align:center}
-#s10 .phc{width:130px;height:130px;border-radius:50%;border:2px dashed rgba(201,122,30,.35);display:flex;align-items:center;justify-content:center;margin:0 auto 26px}
-#s10 .phc span{font-family:var(--font-display);font-size:3.4rem;font-weight:700;color:var(--amber)}
-#s10 .pht{font-family:var(--font-display);font-size:2.4rem;font-weight:700;color:var(--ink);margin-bottom:12px;letter-spacing:-.01em}
-#s10 .php{font-size:1.2rem;color:var(--mid);max-width:520px;line-height:1.6;text-align:center;font-weight:400}
+#s10 .inner{height:100%;display:flex;flex-direction:column;padding:38px 50px 90px;overflow-y:auto}
+#s10 .strike{margin:8px 0 14px}
+#s10 .gantt-meta{
+  display:flex;gap:24px;margin-bottom:14px;flex-wrap:wrap;
+}
+#s10 .gm-item{display:flex;flex-direction:column;gap:2px}
+#s10 .gm-lbl{font-family:var(--font-display);font-size:.65rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--amber)}
+#s10 .gm-val{font-size:.9rem;color:var(--ink);font-weight:500}
+
+/* Months strip */
+#s10 .gantt-months{
+  display:grid;
+  grid-template-columns:230px 1fr;
+  gap:0;
+  margin-bottom:6px;
+  align-items:end;
+}
+#s10 .gm-spacer{}
+#s10 .gm-row{
+  display:grid;
+  grid-template-columns:repeat(8,1fr);
+  border-bottom:1px solid rgba(196,164,107,.3);
+}
+#s10 .gm-cell{
+  font-family:var(--font-display);
+  font-size:.72rem;font-weight:600;
+  letter-spacing:.1em;text-transform:uppercase;
+  color:var(--mid);
+  text-align:center;
+  padding:4px 2px;
+  border-left:1px dashed rgba(196,164,107,.35);
+}
+#s10 .gm-cell:first-child{border-left:none}
+
+/* Phase block */
+#s10 .g-phase{margin-bottom:10px}
+#s10 .g-phase-head{
+  display:flex;align-items:center;gap:8px;
+  padding:6px 12px;
+  background:var(--cream2);
+  border-left:4px solid var(--rust);
+  border-radius:6px 6px 0 0;
+  margin-bottom:0;
+}
+#s10 .g-pid{
+  font-family:var(--font-display);font-size:.72rem;font-weight:700;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--rust);
+  background:rgba(168,75,31,.15);
+  padding:2px 9px;border-radius:12px;
+}
+#s10 .g-pname{
+  font-family:var(--font-display);font-size:.95rem;font-weight:700;
+  color:var(--ink);letter-spacing:-.005em;
+}
+
+/* Row */
+#s10 .g-row{
+  display:grid;
+  grid-template-columns:230px 1fr;
+  gap:0;
+  align-items:center;
+  border-bottom:1px solid rgba(196,164,107,.18);
+  min-height:30px;
+}
+#s10 .g-row:last-child{border-bottom:none}
+#s10 .g-tlabel{
+  display:flex;flex-direction:column;gap:1px;
+  padding:4px 10px 4px 14px;
+  background:var(--cream2);
+  border-left:4px solid rgba(168,75,31,.4);
+  border-right:1px solid rgba(196,164,107,.3);
+}
+#s10 .g-tid{
+  font-family:var(--font-display);font-size:.6rem;font-weight:600;
+  letter-spacing:.08em;text-transform:uppercase;color:var(--mid);
+}
+#s10 .g-tname{
+  font-size:.78rem;color:var(--ink2);font-weight:500;
+  line-height:1.25;
+}
+
+/* Track */
+#s10 .g-track{
+  position:relative;
+  height:30px;
+  background:repeating-linear-gradient(90deg,
+    transparent 0,
+    transparent calc(100%/8 - 1px),
+    rgba(196,164,107,.25) calc(100%/8 - 1px),
+    rgba(196,164,107,.25) calc(100%/8)
+  );
+}
+#s10 .g-bar{
+  position:absolute;
+  top:50%;transform:translateY(-50%);
+  height:16px;
+  border-radius:4px;
+  display:flex;align-items:center;
+  padding:0 6px;
+  white-space:nowrap;
+  box-shadow:0 1px 3px rgba(26,18,8,.12);
+  min-width:6px;
+}
+#s10 .g-bar.g-amber{
+  background:linear-gradient(135deg,var(--amber),var(--amber2));
+}
+#s10 .g-bar.g-rust{
+  background:linear-gradient(135deg,var(--rust),var(--amber));
+}
+#s10 .g-bar-date{
+  font-family:var(--font-display);
+  font-size:.62rem;font-weight:600;
+  color:#fff;
+  letter-spacing:.02em;
+  overflow:hidden;text-overflow:ellipsis;
+}
+/* Hide date inside very small bars */
+#s10 .g-bar[data-tiny="1"] .g-bar-date{display:none}
+
+/* Legend */
+#s10 .g-legend{
+  display:flex;gap:20px;margin-top:12px;
+  padding:8px 14px;
+  background:var(--cream2);
+  border-radius:8px;
+  border:1px solid rgba(196,164,107,.25);
+  align-self:flex-start;
+}
+#s10 .g-leg-item{display:flex;align-items:center;gap:8px;font-size:.78rem;color:var(--ink2);font-weight:500}
+#s10 .g-leg-bar{width:18px;height:8px;border-radius:3px;display:block}
 
 /* =====================================================
    S11 — PRÓXIMOS PASOS
@@ -401,6 +531,7 @@ html,body{
   #s8 .ug{grid-template-columns:1fr 1fr}
   #s8 .tg{grid-template-columns:repeat(3,1fr)}
   #s11 .sg{grid-template-columns:1fr 1fr}
+  #s10 .g-row,#s10 .gantt-months{grid-template-columns:170px 1fr}
 }
 @media(max-width:700px){
   #s1 .inner,#s2 .inner,#s3 .inner,#s4 .inner,#s5 .inner,

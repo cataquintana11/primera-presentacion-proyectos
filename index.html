@@ -164,8 +164,8 @@
 <!-- ============ S4 SISTEMA ============ -->
 <section class="slide" id="s4">
   <div class="inner">
-    <p class="tag" style="color:var(--amber2)">Arquitectura</p>
-    <h2 class="h2" style="color:var(--cream)">Sistema — Hardware y Software</h2>
+    <p class="tag">Arquitectura</p>
+    <h2 class="h2">Sistema — Hardware y Software</h2>
     <div class="strike"></div>
     <div class="sgrid">
       <div class="spanel">
@@ -232,8 +232,8 @@
 <!-- ============ S7 OKRs ============ -->
 <section class="slide" id="s7">
   <div class="inner">
-    <p class="tag" style="color:var(--amber2)">Objetivos y Resultados Clave</p>
-    <h2 class="h2" style="color:var(--cream)">OKRs del Proyecto</h2>
+    <p class="tag">Objetivos y Resultados Clave</p>
+    <h2 class="h2">OKRs del Proyecto</h2>
     <div class="strike"></div>
     <div class="og">
       <div class="okr">
@@ -332,8 +332,8 @@
 <!-- ============ S9 SW + HW ============ -->
 <section class="slide" id="s9">
   <div class="inner">
-    <p class="tag" style="color:var(--amber2)">Stack</p>
-    <h2 class="h2" style="color:var(--cream)">Interfaz de Software y Hardware</h2>
+    <p class="tag">Stack</p>
+    <h2 class="h2">Interfaz de Software y Hardware</h2>
     <div class="strike"></div>
     <div class="dual">
       <div class="tp">
@@ -356,17 +356,153 @@
   </div>
 </section>
 
-<!-- ============ S10 GANTT (placeholder) ============ -->
+<!-- ============ S10 GANTT ============ -->
 <section class="slide" id="s10">
   <div class="inner">
     <p class="tag" style="color:var(--rust)">Planificación</p>
-    <h2 class="h2">Cronograma</h2>
+    <h2 class="h2">Cronograma — Diagrama de Gantt</h2>
     <div class="strike" style="background:var(--rust)"></div>
-    <div class="ph">
-      <div class="phc"><span>?</span></div>
-      <div class="pht">Diagrama de Gantt</div>
-      <p class="php">El cronograma será proporcionado por el equipo y cargado en este slide.</p>
+
+    <div class="gantt-meta">
+      <div class="gm-item"><span class="gm-lbl">Inicio</span><span class="gm-val">15 Abril 2026</span></div>
+      <div class="gm-item"><span class="gm-lbl">Fin</span><span class="gm-val">28 Noviembre 2026</span></div>
+      <div class="gm-item"><span class="gm-lbl">Duración total</span><span class="gm-val">~32 semanas</span></div>
+      <div class="gm-item"><span class="gm-lbl">Etapas</span><span class="gm-val">6 etapas · 21 tareas</span></div>
     </div>
+
+    <div class="gantt-months">
+      <div class="gm-spacer"></div>
+      <div class="gm-row">
+        <div class="gm-cell">Abr</div>
+        <div class="gm-cell">May</div>
+        <div class="gm-cell">Jun</div>
+        <div class="gm-cell">Jul</div>
+        <div class="gm-cell">Ago</div>
+        <div class="gm-cell">Sep</div>
+        <div class="gm-cell">Oct</div>
+        <div class="gm-cell">Nov</div>
+      </div>
+    </div>
+
+    <!-- E01 -->
+    <div class="g-phase">
+      <div class="g-phase-head"><span class="g-pid">E01</span><span class="g-pname">Validación del problema</span></div>
+      <div class="g-row">
+        <div class="g-tlabel"><span class="g-tid">E01.1</span><span class="g-tname">Primera entrevista</span></div>
+        <div class="g-track"><div class="g-bar g-amber" style="left:0%;width:1.5%" data-tiny="1"><span class="g-bar-date">15 Abr</span></div></div>
+      </div>
+      <div class="g-row">
+        <div class="g-tlabel"><span class="g-tid">E01.2</span><span class="g-tname">Identificación de la problemática</span></div>
+        <div class="g-track"><div class="g-bar g-amber" style="left:0%;width:0.88%" data-tiny="1"><span class="g-bar-date">15–17 Abr</span></div></div>
+      </div>
+      <div class="g-row">
+        <div class="g-tlabel"><span class="g-tid">E01.3</span><span class="g-tname">Análisis inicial</span></div>
+        <div class="g-track"><div class="g-bar g-amber" style="left:0.88%;width:6.61%"><span class="g-bar-date">17 Abr → 02 May</span></div></div>
+      </div>
+      <div class="g-row">
+        <div class="g-tlabel"><span class="g-tid">E01.4</span><span class="g-tname">Definición de roles</span></div>
+        <div class="g-track"><div class="g-bar g-amber" style="left:3.96%;width:1.5%" data-tiny="1"><span class="g-bar-date">24 Abr</span></div></div>
+      </div>
+    </div>
+
+    <!-- E02 -->
+    <div class="g-phase">
+      <div class="g-phase-head"><span class="g-pid">E02</span><span class="g-pname">Estudio de factibilidad</span></div>
+      <div class="g-row">
+        <div class="g-tlabel"><span class="g-tid">E02.1</span><span class="g-tname">Estudio de viabilidad técnica</span></div>
+        <div class="g-track"><div class="g-bar g-rust" style="left:0.88%;width:3.08%"><span class="g-bar-date">17–24 Abr</span></div></div>
+      </div>
+      <div class="g-row">
+        <div class="g-tlabel"><span class="g-tid">E02.2</span><span class="g-tname">Análisis de gestión y tiempos</span></div>
+        <div class="g-track"><div class="g-bar g-rust" style="left:7.49%;width:1.5%" data-tiny="1"><span class="g-bar-date">02 May</span></div></div>
+      </div>
+      <div class="g-row">
+        <div class="g-tlabel"><span class="g-tid">E02.3</span><span class="g-tname">Primera Presentación</span></div>
+        <div class="g-track"><div class="g-bar g-rust" style="left:9.25%;width:1.5%" data-tiny="1"><span class="g-bar-date">06 May</span></div></div>
+      </div>
+    </div>
+
+    <!-- E03 -->
+    <div class="g-phase">
+      <div class="g-phase-head"><span class="g-pid">E03</span><span class="g-pname">Diseño del sistema</span></div>
+      <div class="g-row">
+        <div class="g-tlabel"><span class="g-tid">E03.1</span><span class="g-tname">Viabilidad técnica</span></div>
+        <div class="g-track"><div class="g-bar g-amber" style="left:3.96%;width:9.69%"><span class="g-bar-date">24 Abr → 16 May</span></div></div>
+      </div>
+      <div class="g-row">
+        <div class="g-tlabel"><span class="g-tid">E03.2</span><span class="g-tname">Viabilidad económica</span></div>
+        <div class="g-track"><div class="g-bar g-amber" style="left:13.66%;width:3.08%"><span class="g-bar-date">16–23 May</span></div></div>
+      </div>
+      <div class="g-row">
+        <div class="g-tlabel"><span class="g-tid">E03.3</span><span class="g-tname">Análisis de riesgos</span></div>
+        <div class="g-track"><div class="g-bar g-amber" style="left:13.66%;width:6.17%"><span class="g-bar-date">16–30 May</span></div></div>
+      </div>
+    </div>
+
+    <!-- E04 -->
+    <div class="g-phase">
+      <div class="g-phase-head"><span class="g-pid">E04</span><span class="g-pname">Prototipo HCI</span></div>
+      <div class="g-row">
+        <div class="g-tlabel"><span class="g-tid">E04.1</span><span class="g-tname">Diseño de base de datos</span></div>
+        <div class="g-track"><div class="g-bar g-rust" style="left:19.82%;width:12.33%"><span class="g-bar-date">30 May → 27 Jun</span></div></div>
+      </div>
+      <div class="g-row">
+        <div class="g-tlabel"><span class="g-tid">E04.2</span><span class="g-tname">Diseño de red</span></div>
+        <div class="g-track"><div class="g-bar g-rust" style="left:19.82%;width:15.42%"><span class="g-bar-date">30 May → 04 Jul</span></div></div>
+      </div>
+      <div class="g-row">
+        <div class="g-tlabel"><span class="g-tid">E04.3</span><span class="g-tname">Diseño de interfaces (HCI)</span></div>
+        <div class="g-track"><div class="g-bar g-rust" style="left:25.99%;width:18.50%"><span class="g-bar-date">13 Jun → 25 Jul</span></div></div>
+      </div>
+      <div class="g-row">
+        <div class="g-tlabel"><span class="g-tid">E04.4</span><span class="g-tname">Diseño de Mockups</span></div>
+        <div class="g-track"><div class="g-bar g-rust" style="left:47.58%;width:12.33%"><span class="g-bar-date">01 Ago → 29 Ago</span></div></div>
+      </div>
+      <div class="g-row">
+        <div class="g-tlabel"><span class="g-tid">E04.5</span><span class="g-tname">Pruebas de usuario</span></div>
+        <div class="g-track"><div class="g-bar g-rust" style="left:59.91%;width:9.25%"><span class="g-bar-date">29 Ago → 19 Sep</span></div></div>
+      </div>
+    </div>
+
+    <!-- E05 -->
+    <div class="g-phase">
+      <div class="g-phase-head"><span class="g-pid">E05</span><span class="g-pname">Desarrollo</span></div>
+      <div class="g-row">
+        <div class="g-tlabel"><span class="g-tid">E05.1</span><span class="g-tname">Codificación Backend y Frontend</span></div>
+        <div class="g-track"><div class="g-bar g-amber" style="left:63.00%;width:18.50%"><span class="g-bar-date">05 Sep → 17 Oct</span></div></div>
+      </div>
+      <div class="g-row">
+        <div class="g-tlabel"><span class="g-tid">E05.2</span><span class="g-tname">Integración HW + SW</span></div>
+        <div class="g-track"><div class="g-bar g-amber" style="left:81.50%;width:6.17%"><span class="g-bar-date">17–31 Oct</span></div></div>
+      </div>
+      <div class="g-row">
+        <div class="g-tlabel"><span class="g-tid">E05.3</span><span class="g-tname">Documentación de procesos</span></div>
+        <div class="g-track"><div class="g-bar g-amber" style="left:87.67%;width:3.08%"><span class="g-bar-date">31 Oct → 07 Nov</span></div></div>
+      </div>
+    </div>
+
+    <!-- E06 -->
+    <div class="g-phase">
+      <div class="g-phase-head"><span class="g-pid">E06</span><span class="g-pname">Presentación final</span></div>
+      <div class="g-row">
+        <div class="g-tlabel"><span class="g-tid">E06.1</span><span class="g-tname">Últimos detalles</span></div>
+        <div class="g-track"><div class="g-bar g-rust" style="left:93.83%;width:1.5%" data-tiny="1"><span class="g-bar-date">14 Nov</span></div></div>
+      </div>
+      <div class="g-row">
+        <div class="g-tlabel"><span class="g-tid">E06.2</span><span class="g-tname">Capacitación de usuarios</span></div>
+        <div class="g-track"><div class="g-bar g-rust" style="left:96.92%;width:1.5%" data-tiny="1"><span class="g-bar-date">21 Nov</span></div></div>
+      </div>
+      <div class="g-row">
+        <div class="g-tlabel"><span class="g-tid">E06.3</span><span class="g-tname">Defensa final del proyecto</span></div>
+        <div class="g-track"><div class="g-bar g-rust" style="left:98.5%;width:1.5%" data-tiny="1"><span class="g-bar-date">28 Nov</span></div></div>
+      </div>
+    </div>
+
+    <div class="g-legend">
+      <div class="g-leg-item"><span class="g-leg-bar" style="background:linear-gradient(135deg,var(--amber),var(--amber2))"></span>Etapas impares (E01, E03, E05)</div>
+      <div class="g-leg-item"><span class="g-leg-bar" style="background:linear-gradient(135deg,var(--rust),var(--amber))"></span>Etapas pares (E02, E04, E06)</div>
+    </div>
+
   </div>
 </section>
 
