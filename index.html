@@ -1,279 +1,461 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Proyectos de Transformación Digital · Grupo 3</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TADIN — Proyecto 1 · Equipo 6</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<div class="deck" id="deck">
 
-<header class="site-header">
-  <span class="logo">Grupo 3 · 7° Informática A</span>
-  <span class="team">Instituto Leonardo Murialdo</span>
-</header>
-
-<div class="deck">
-
-  <!-- SLIDE 1: COVER -->
-  <div class="slide slide-cover" data-n="01">
-    <div class="slide-accent"></div>
-    <div class="section-label">Proyecto Final · 2024</div>
-    <h1>Transformación<br>Digital</h1>
-    <span class="subtitle">Consultoría & Soluciones Tecnológicas para la Industria</span>
-    <p>Dos casos reales de diagnóstico, diseño e implementación de soluciones tecnológicas para empresas de alta exigencia.</p>
-    <div class="team-list">
-      <div class="team-chip"><span>PM</span> Mia</div>
-      <div class="team-chip"><span>Back</span> Taty</div>
-      <div class="team-chip"><span>HW</span> Mili</div>
-      <div class="team-chip"><span>UX</span> Cata</div>
-      <div class="team-chip"><span>DB</span> Perri</div>
+<!-- ============ S1 CARÁTULA ============ -->
+<section class="slide active" id="s1">
+  <div class="inner">
+    <div class="eyebrow"><span></span><p class="tag">Primera Presentación de Proyecto · TADIN</p></div>
+    <h1 class="h1">Proyecto 1<br><em>TADIN</em></h1>
+    <p class="sub">Digitalización de procesos para una empresa de pintura electrostática.</p>
+    <div class="meta-row">
+      <div><div class="ml">Equipo</div><div class="mv">N° 6</div></div>
+      <div><div class="ml">Curso</div><div class="mv">7mo Informática B</div></div>
+      <div><div class="ml">Fecha</div><div class="mv">Mayo 2026</div></div>
+    </div>
+    <div class="team">
+      <div class="tm"><div class="av">MN</div><div><div class="tn">Mía Niello</div><div class="tr">PM / Frontend</div></div></div>
+      <div class="tm"><div class="av">CQ</div><div><div class="tn">Catalina Quintana</div><div class="tr">Frontend · UX/UI</div></div></div>
+      <div class="tm"><div class="av">TB</div><div><div class="tn">Tatiana Bravo</div><div class="tr">Backend</div></div></div>
+      <div class="tm"><div class="av">NP</div><div><div class="tn">Nicolás Perri</div><div class="tr">DB · Backend</div></div></div>
+      <div class="tm"><div class="av">MC</div><div><div class="tn">Milagros Camino</div><div class="tr">Infraestructura · Seguridad</div></div></div>
     </div>
   </div>
+</section>
 
-  <!-- DIVIDER PART 1 -->
-  <div class="slide slide-divider" data-n="—">
-    <span class="part-num">01</span>
-    <div class="section-label" style="color:rgba(255,255,255,.5)">Caso · Parte I</div>
-    <h2>TA-DIN</h2>
-    <p>Pintura industrial en polvo sobre chapa. Minería, petróleo, metalúrgica y telecomunicaciones.</p>
-  </div>
-
-  <!-- SLIDE 2: CONTEXTO TA-DIN -->
-  <div class="slide" data-n="02">
-    <div class="slide-accent"></div>
-    <div class="section-label">Contexto Institucional</div>
-    <h2>¿Quiénes son?</h2>
-    <p>Empresa especializada en servicios de <strong>pintura en polvo sobre chapa</strong> para sectores críticos: minería, petróleo, metalúrgica y telecomunicaciones.</p>
-    <div class="cols" style="margin-top:28px;">
-      <div class="col-card">
-        <span class="card-icon">🏭</span>
-        <h4>Clientes estratégicos</h4>
-        <p>Proveedores de grandes entidades como YPF y Edenor.</p>
-      </div>
-      <div class="col-card">
-        <span class="card-icon">📋</span>
-        <h4>Desafío actual</h4>
-        <p>Inicio del proceso de certificación ISO 9001, que exige digitalización y auditoría de todos sus procesos.</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- SLIDE 3: DIAGNÓSTICO -->
-  <div class="slide" data-n="03">
-    <div class="slide-accent"></div>
-    <div class="section-label">Diagnóstico · Marketing & Operaciones</div>
-    <h2>El problema</h2>
-    <ul class="item-list">
-      <li><span class="dot"></span><div><strong>Sin presencia digital:</strong> No existe sitio web ni canales institucionales activos.</div></li>
-      <li><span class="dot"></span><div><strong>Demanda no segmentada:</strong> Alta carga de pedidos minoristas de baja escala que impide la especialización en nichos industriales.</div></li>
-      <li><span class="dot"></span><div><strong>Saturación administrativa:</strong> El personal dedica tiempo excesivo a tareas manuales repetitivas como copiar datos y mensajes de bienvenida básicos.</div></li>
-      <li><span class="dot"></span><div><strong>Control de personal analógico:</strong> Dependencia del papel sin registro auditable de ingreso y egreso.</div></li>
-    </ul>
-  </div>
-
-  <!-- SLIDE 4: SOLUCIÓN MKTG -->
-  <div class="slide" data-n="04">
-    <div class="slide-accent"></div>
-    <div class="section-label">Solución · Marketing & Comunicación</div>
-    <h2>Presencia digital<br>como filtro natural</h2>
-    <div class="cols" style="margin-top:28px;">
-      <div class="col-card">
-        <span class="card-icon">🌐</span>
-        <h4>Sitio Web Institucional</h4>
-        <p>Plataforma orientada a minería y petróleo que actúa de "filtro natural" frente a clientes minoristas.</p>
-      </div>
-      <div class="col-card">
-        <span class="card-icon">📂</span>
-        <h4>Catálogo Técnico Digital</h4>
-        <p>Espacio digital para visualizar la capacidad de la planta sin necesidad de consultas previas.</p>
-      </div>
-      <div class="col-card">
-        <span class="card-icon">⚡</span>
-        <h4>Automatización de formularios</h4>
-        <p>Formularios profesionales vinculados a Google Sheets para historial de compras y frecuencia de clientes.</p>
-      </div>
-      <div class="col-card">
-        <span class="card-icon">📡</span>
-        <h4>Tarjetas NFC</h4>
-        <p>Reemplazo de tarjetas físicas. Al acercarlas al móvil, redirigen directo al sitio web eliminando errores de carga manual.</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- SLIDE 5: RRHH -->
-  <div class="slide" data-n="05">
-    <div class="slide-accent"></div>
-    <div class="section-label">Solución · Recursos Humanos</div>
-    <h2>Control y trazabilidad<br>del personal</h2>
-    <p>La norma ISO 9001 exige un registro auditable de horarios. La gestión actual con papel no lo permite.</p>
-    <div class="highlight-box" style="margin-top:28px;">
-      <p><strong>Propuesta:</strong> Instalación de un <strong>reloj biométrico</strong> (huella o reconocimiento facial) con alertas automáticas de tardanzas y cumplimiento del registro requerido por la norma.</p>
-    </div>
-    <div class="fact-strip" style="margin-top:28px;">
-      <div class="fact">
-        <span class="fact-num">0</span>
-        <span class="fact-label">Papel en el<br>proceso de control</span>
-      </div>
-      <div class="fact">
-        <span class="fact-num">ISO</span>
-        <span class="fact-label">9001 compliance<br>garantizado</span>
-      </div>
-      <div class="fact">
-        <span class="fact-num">NFC</span>
-        <span class="fact-label">Tecnología de<br>contacto instantáneo</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- DIVIDER PART 2 -->
-  <div class="slide slide-divider" data-n="—">
-    <span class="part-num">02</span>
-    <div class="section-label" style="color:rgba(255,255,255,.5)">Caso · Parte II</div>
-    <h2>Training Point</h2>
-    <p>Gestión integral para un profesor de entrenamiento funcional con 25 alumnos.</p>
-  </div>
-
-  <!-- SLIDE 6: DIAGNÓSTICO TP -->
-  <div class="slide" data-n="06">
-    <div class="slide-accent"></div>
-    <div class="section-label">Diagnóstico · Training Point</div>
-    <h2>Un negocio frenado<br>por el papel</h2>
-    <p>Profesor de entrenamiento funcional con 25 alumnos gestionando todo de forma 100% manual: notas de celular y WhatsApp.</p>
-    <ul class="item-list" style="margin-top:24px;">
-      <li><span class="dot"></span><div><strong>+1 hora extra</strong> por sesión dedicada sólo a planificación.</div></li>
-      <li><span class="dot"></span><div><strong>Sin control de cupos:</strong> reprogramaciones de último momento y exceso de alumnos frente al material disponible.</div></li>
-      <li><span class="dot"></span><div><strong>Caos financiero:</strong> pérdida total de control sobre abonos y rentabilidad real.</div></li>
-      <li><span class="dot"></span><div><strong>Brecha con el alumno:</strong> los usuarios no conocen su progreso ni sus clases disponibles.</div></li>
-    </ul>
-  </div>
-
-  <!-- SLIDE 7: PROPUESTA TP -->
-  <div class="slide" data-n="07">
-    <div class="slide-accent"></div>
-    <div class="section-label">La Propuesta · Training Point</div>
-    <h2>Ecosistema digital<br>integral</h2>
-    <p>Plataforma web/móvil que centraliza toda la operación del entrenamiento en tres ejes.</p>
-    <div class="cols" style="margin-top:28px;">
-      <div class="col-card">
-        <span class="card-icon">🧠</span>
-        <h4>Eje 1 · Automatización técnica</h4>
-        <p>Gestor inteligente con biblioteca de ejercicios. Diseño de clases reducido de <strong>60 a 15 minutos</strong>.</p>
-      </div>
-      <div class="col-card">
-        <span class="card-icon">📅</span>
-        <h4>Eje 2 · Módulo de reservas</h4>
-        <p>Límite de vacantes que bloquea cupos automáticamente según el material disponible.</p>
-      </div>
-      <div class="col-card">
-        <span class="card-icon">💰</span>
-        <h4>Eje 3 · Dashboard contable</h4>
-        <p>Sustitución total del papel para seguimiento de vencimientos, pagos y estadísticas de rentabilidad.</p>
-      </div>
-      <div class="col-card">
-        <span class="card-icon">🏅</span>
-        <h4>Portal del alumno</h4>
-        <p>Gestión de turnos, créditos y visualización gráfica de PRs. Diseñado para usuarios de 40–50 años.</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- SLIDE 8: VIABILIDAD -->
-  <div class="slide" data-n="08">
-    <div class="slide-accent"></div>
-    <div class="section-label">Viabilidad Técnica y Económica</div>
-    <h2>Estado del proyecto</h2>
-
-    <div class="progress-wrap">
-      <div class="progress-label">
-        <span>Avance de desarrollo</span>
-        <span>63%</span>
-      </div>
-      <div class="progress-bar">
-        <div class="progress-fill" id="pf" style="width:0%"></div>
-      </div>
-    </div>
-
-    <div class="cols" style="margin-top:32px;">
-      <div>
-        <p style="margin-bottom:12px;"><strong style="color:var(--ink)">Stack tecnológico</strong></p>
-        <div class="tags">
-          <span class="tag tag-filled">React Native</span>
-          <span class="tag tag-outline">NoSQL</span>
-          <span class="tag tag-outline">Google APIs</span>
-          <span class="tag tag-outline">REST</span>
+<!-- ============ S2 CASO DE USO ============ -->
+<section class="slide" id="s2">
+  <div class="inner">
+    <p class="tag">Caso de uso</p>
+    <h2 class="h2">Análisis de Requerimientos</h2>
+    <div class="strike"></div>
+    <div class="grid">
+      <div class="profile">
+        <p class="ptag">Cliente</p>
+        <div class="bav">PE</div>
+        <div class="pn">Empresa de Pintura Electrostática</div>
+        <div class="pr">Servicios industriales de pintura electrostática</div>
+        <div class="pi">
+          <p class="pl">Contacto del relevamiento</p>
+          <div class="prow">Silvana Bravo — empleada administrativa</div>
+          <p class="pl" style="margin-top:8px">Estructura</p>
+          <div class="prow">10 empleados directos</div>
+          <div class="prow">Equipo externo: Contabilidad, Finanzas, Sistemas, Higiene y Seguridad</div>
+          <p class="pl" style="margin-top:8px">Equipamiento</p>
+          <div class="prow">PC de escritorio + celulares Samsung</div>
+          <p class="pl" style="margin-top:8px">Target comercial</p>
+          <div class="prow">Industrias petroleras, mineras y telefónicas</div>
         </div>
       </div>
-      <div class="fact-strip" style="margin-top:0; border:1px solid var(--border); border-radius:3px;">
-        <div class="fact" style="border:none; border-right:1px solid var(--border);">
-          <span class="fact-num" style="font-size:22px;">$6.3M</span>
-          <span class="fact-label">Inversión estimada<br>(diseño + licencias + mant.)</span>
+      <div class="syms">
+        <div class="sym"><div class="st">Falta de especialización de nicho</div><p class="sd">Gran parte de los clientes son minoristas, dificultando la consolidación en el nicho industrial. La empresa no tiene presencia digital profesional (redes sociales desalineadas, sin sitio web).</p></div>
+        <div class="sym"><div class="st">Carga operativa manual</div><p class="sd">Cada consulta debe responderse individualmente de cero. Sin respuestas automáticas ni software intermediario entre el cliente y la empresa.</p></div>
+        <div class="sym"><div class="st">Sin estadísticas de clientes</div><p class="sd">No hay registro de cuántas personas consultan, continúan con la compra o quedan insatisfechas. Los datos de clientes potenciales se "escapan" por falta de base de datos.</p></div>
+        <div class="sym"><div class="st">Control de personal obsoleto</div><p class="sd">Ingreso y egreso sin automatización. Horas trabajadas y sueldos contados manualmente. Pérdida de tiempo administrativo y margen de error.</p></div>
+        <div class="sym"><div class="st">Transferencia de contacto analógica</div><p class="sd">Datos de contacto transferidos de forma manual. La empresa busca proyectar innovación y eficiencia en la conectividad con sus clientes.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ S3 DEL SÍNTOMA A LA CAUSA ============ -->
+<section class="slide" id="s3">
+  <div class="inner">
+    <p class="tag">Diagnóstico</p>
+    <h2 class="h2">Del Síntoma a la Causa Real</h2>
+    <div class="strike"></div>
+    <div class="legend">
+      <div class="lg-item"><span class="lg-dot" style="background:var(--rust)"></span>Síntoma — lo que dice la empresa</div>
+      <div class="lg-item"><span class="lg-dot" style="background:var(--mid)"></span>Causa — lo que realmente sucede</div>
+      <div class="lg-item"><span class="lg-dot" style="background:var(--amber)"></span>Solución técnica propuesta</div>
+    </div>
+    <div class="cgrid">
+
+      <div class="cscard">
+        <div class="cs-head">
+          <div class="cs-mod">Sitio Web Institucional</div>
+          <span class="cs-code">ISW01</span>
         </div>
-        <div class="fact" style="border:none;">
-          <span class="fact-num" style="font-size:22px;">−75%</span>
-          <span class="fact-label">Tiempo de<br>planificación</span>
+        <div class="cs-block sin">
+          <div class="cs-label">Síntoma</div>
+          <div class="cs-text"><em>"Queremos enfocarnos en el nicho de industrias petroleras, mineras, telefónicas. Tenemos muchos clientes con necesidades minoristas."</em></div>
+        </div>
+        <div class="cs-block cau">
+          <div class="cs-label">Causa Real</div>
+          <div class="cs-text">La empresa no tiene presencia digital que proyecte una imagen profesional acorde a su enfoque industrial. Sus redes sociales están desalineadas y no posee un sitio web propio.</div>
+        </div>
+        <div class="cs-block sol">
+          <div class="cs-label">Solución Técnica</div>
+          <div class="cs-text">Construir un sitio web orientado específicamente al sector industrial, detallando procesos y normativas. Esto actúa como un "filtro" para clientes minoristas fuera del nicho objetivo.</div>
+        </div>
+      </div>
+
+      <div class="cscard">
+        <div class="cs-head">
+          <div class="cs-mod">Respuesta Automática y Estadística de Datos</div>
+          <span class="cs-code">ISW02 · RF03</span>
+        </div>
+        <div class="cs-block sin">
+          <div class="cs-label">Síntoma</div>
+          <div class="cs-text"><em>"Debo contestar cada consulta individualmente, de cero. No sabemos cuánta gente nos consulta ni por qué algunos no compran. Se nos 'escapan' datos de clientes que podrían volver a elegirnos."</em></div>
+        </div>
+        <div class="cs-block cau">
+          <div class="cs-label">Causa Real</div>
+          <div class="cs-text">No se han implementado capas de software que actúen como intermediarios entre el cliente y la empresa. Tampoco hay una base de datos de clientes, lo que genera carga operativa innecesaria.</div>
+        </div>
+        <div class="cs-block sol">
+          <div class="cs-label">Solución Técnica</div>
+          <div class="cs-text">Al recibir una consulta, se envía un mensaje automático junto a un enlace a un formulario web. Los datos van automáticamente a una hoja de cálculo / base de datos vinculada (nombre, mail y empresa).</div>
+        </div>
+      </div>
+
+      <div class="cscard">
+        <div class="cs-head">
+          <div class="cs-mod">Reloj Biométrico y Contabilización del Sueldo</div>
+          <span class="cs-code">RHW02</span>
+        </div>
+        <div class="cs-block sin">
+          <div class="cs-label">Síntoma</div>
+          <div class="cs-text"><em>"A veces no sé cuándo un empleado no cumplió con el horario laboral. Pierdo mucho tiempo contando las horas trabajadas de cada empleado y su paga correspondiente de forma manual."</em></div>
+        </div>
+        <div class="cs-block cau">
+          <div class="cs-label">Causa Real</div>
+          <div class="cs-text">El control de ingreso y egreso de los empleados se realiza mediante sistemas obsoletos. Existe una dependencia, y el sector de administración no cuenta con un sistema que contabilice horas trabajadas y sueldos.</div>
+        </div>
+        <div class="cs-block sol">
+          <div class="cs-label">Solución Técnica</div>
+          <div class="cs-text">Instalar un Reloj Biométrico de Control de Asistencia (iFace 302). Cada empleado se registra mediante huella o reconocimiento facial. Mediante el software, se contabilizan automáticamente las horas trabajadas y el sueldo correspondiente.</div>
+        </div>
+      </div>
+
+      <div class="cscard">
+        <div class="cs-head">
+          <div class="cs-mod">Tarjetas NFC</div>
+          <span class="cs-code">RHW03</span>
+        </div>
+        <div class="cs-block sin">
+          <div class="cs-label">Síntoma</div>
+          <div class="cs-text"><em>"Nos gustaría subir un nivel y ser más eficientes al transferir los datos a nuestros clientes."</em></div>
+        </div>
+        <div class="cs-block cau">
+          <div class="cs-label">Causa Real</div>
+          <div class="cs-text">El proceso de transferencia de datos de contacto entre los representantes de la empresa y los clientes potenciales se basa en métodos analógicos o manuales (tarjetas de papel, dictado, etc.).</div>
+        </div>
+        <div class="cs-block sol">
+          <div class="cs-label">Solución Técnica</div>
+          <div class="cs-text">Adaptar las tarjetas de papel tradicionales a tarjetas de presentación con tecnología NFC (NTAG215, 13,56 MHz, 504 bytes) que redirigen al sitio web o vCard digital al acercar un smartphone.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ S4 SISTEMA ============ -->
+<section class="slide" id="s4">
+  <div class="inner">
+    <p class="tag" style="color:var(--amber2)">Arquitectura</p>
+    <h2 class="h2" style="color:var(--cream)">Sistema — Hardware y Software</h2>
+    <div class="strike"></div>
+    <div class="sgrid">
+      <div class="spanel">
+        <div class="spt">Hardware</div>
+        <div class="si"><div class="sin">Servidor Web + Dominio (.com / .com.ar)</div><div class="sid">Hosting con dominio propio. Elimina correos gratuitos (Gmail/Outlook) y habilita correos corporativos.</div></div>
+        <div class="si"><div class="sin">Reloj iFace 302 — ZKTeco</div><div class="sid">Control de asistencia biométrico: lector de huella dactilar + reconocimiento facial. Conexión TCP/IP (Ethernet) o Wi-Fi integrado a la red local.</div></div>
+        <div class="si"><div class="sin">Tarjetas NFC — NTAG215</div><div class="sid">13,56 MHz · 504 bytes de memoria. Tarjetas de presentación con tecnología NFC para transferencia de datos de contacto.</div></div>
+        <div class="si"><div class="sin">PCs de escritorio + Celulares Samsung</div><div class="sid">Equipos actuales de la empresa para gestión administrativa y acceso al sistema.</div></div>
+      </div>
+      <div class="spanel">
+        <div class="spt">Software</div>
+        <div class="si"><div class="sin">Frontend — HTML5 · CSS3 · JavaScript</div><div class="sid">Diseño responsivo orientado al sector industrial. Dashboard de administración con reportes.</div></div>
+        <div class="si"><div class="sin">Backend — PHP</div><div class="sid">Gestión de lógica del sistema, CMS básico y formularios de contacto profesionales.</div></div>
+        <div class="si"><div class="sin">Base de Datos — MySQL</div><div class="sid">Almacena clientes, consultas, empleados y registros de asistencia. Cálculo de horas y sueldos vía SQL.</div></div>
+        <div class="si"><div class="sin">ZKLib — librería PHP</div><div class="sid">Comunicación por sockets con el reloj biométrico. Vuelca registros de asistencia a tablas MySQL.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ S5 RF ============ -->
+<section class="slide" id="s5">
+  <div class="inner">
+    <p class="tag" style="color:var(--rust)">Requerimientos</p>
+    <h2 class="h2">Requerimientos Funcionales</h2>
+    <div class="strike" style="background:var(--rust)"></div>
+    <div class="rgrid">
+      <div class="rc"><div class="ri">RF01</div><div class="rn">Sitio Web Institucional</div><div class="rd">Mostrar información de la empresa, servicios y datos de contacto.</div><div class="rs">Origen: necesidad de mejorar imagen y distribución en el mercado</div><span class="pill pa">Prioridad Alta</span></div>
+      <div class="rc"><div class="ri">RF02</div><div class="rn">Formulario de Contacto</div><div class="rd">Permitir que potenciales clientes envíen consultas y datos.</div><div class="rs">Origen: problema en gestión de consultas</div><span class="pill pa">Prioridad Alta</span></div>
+      <div class="rc"><div class="ri">RF03</div><div class="rn">Registro Automático de Clientes</div><div class="rd">Guardar datos ingresados en formularios en una base de datos.</div><div class="rs">Origen: necesidad de organización</div><span class="pill pa">Prioridad Alta</span></div>
+      <div class="rc"><div class="ri">RF04</div><div class="rn">Registro Biométrico de Asistencia</div><div class="rd">Registrar el ingreso y egreso de los empleados con huella dactilar o reconocimiento facial.</div><div class="rs">Origen: problema en control de horarios</div><span class="pill pa">Prioridad Alta</span></div>
+      <div class="rc"><div class="ri">RF05</div><div class="rn">Alerta de Asistencia</div><div class="rd">Notificar llegadas tarde o irregularidades en el registro de asistencia.</div><div class="rs">Origen: supervisión de empleados</div><span class="pill pa">Prioridad Alta</span></div>
+      <div class="rc"><div class="ri">RF06</div><div class="rn">Respuestas Automáticas</div><div class="rd">Enviar mensajes automáticos a clientes vía WhatsApp Business, Instagram Business y Meta Business Suite con enlace al formulario.</div><div class="rs">Origen: automatización de comunicación</div><span class="pill pm">Prioridad Media</span></div>
+      <div class="rc"><div class="ri">RF07</div><div class="rn">Integración con NFC</div><div class="rd">Permitir compartir datos de contacto y redirigir al sitio web mediante tarjetas NFC NTAG215.</div><div class="rs">Origen: modernización del contacto</div><span class="pill pm">Prioridad Media</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ S6 RNF + LIMITACIONES ============ -->
+<section class="slide" id="s6">
+  <div class="inner">
+    <p class="tag">Requerimientos No Funcionales</p>
+    <h2 class="h2">RNF, Hardware y Alcance</h2>
+    <div class="strike"></div>
+    <div class="dual">
+      <div class="rnf-list">
+        <div class="rnf"><div class="ri2">RNF01 — Disponibilidad</div><div class="rc2">24 / 7</div><div class="rd2">El sistema debe estar disponible las 24 horas del día, los 7 días de la semana para acceso continuo al sitio web.</div></div>
+        <div class="rnf"><div class="ri2">RNF02 · RNF03 — Usabilidad</div><div class="rc2">Multi-dispositivo y UX</div><div class="rd2">Accesible desde PC y dispositivos móviles sin instalar apps adicionales. Interfaz clara, intuitiva y fácil de usar para usuarios no técnicos.</div></div>
+        <div class="rnf"><div class="ri2">RNF04 — Seguridad</div><div class="rc2">Autenticación y protección</div><div class="rd2">El sistema debe garantizar la seguridad de los datos mediante autenticación y protección de acceso al manejar datos sensibles.</div></div>
+        <div class="rnf"><div class="ri2">RNF05 — Escalabilidad</div><div class="rc2">Crecimiento de la empresa</div><div class="rd2">El sistema debe ser escalable para soportar el crecimiento de usuarios y datos conforme se expande la empresa.</div></div>
+        <div class="rnf"><div class="ri2">RNF06 — Fiabilidad</div><div class="rc2">Respaldo y recuperación</div><div class="rd2">El sistema debe contar con mecanismo de respaldo y recuperación de datos para prevenir pérdida de información.</div></div>
+        <div class="rnf"><div class="ri2">RNF07 — Calidad</div><div class="rc2">ISO 9001</div><div class="rd2">El sistema debe cumplir con estándares de calidad acordes a la norma ISO 9001 en el proceso de certificación.</div></div>
+      </div>
+      <div class="lp">
+        <div class="lpt">Limitaciones — Qué NO hace el sistema (v1)</div>
+        <div class="li"><div class="lid">LIM01</div><div class="lt">No filtra automáticamente a todos los clientes no industriales. El sitio orienta al público objetivo pero no bloquea consultas fuera del nicho.</div><div class="lf">V. futura: filtrado estricto, evaluando riesgo de perder clientes válidos.</div></div>
+        <div class="li"><div class="lid">LIM02</div><div class="lt">No gestiona decisiones automáticas sobre asistencia (sanciones). Registra y alerta; las decisiones son humanas para evitar errores o conflictos.</div><div class="lf">V. futura: módulo de sanciones con aprobación humana.</div></div>
+        <div class="li"><div class="lid">LIM03</div><div class="lt">No integra todos los sistemas externos (Contabilidad, Finanzas, etc.). El proyecto se enfoca en web, CRM y control de asistencia.</div><div class="lf">V. futura: integraciones completas con más tiempo y recursos.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ S7 OKRs ============ -->
+<section class="slide" id="s7">
+  <div class="inner">
+    <p class="tag" style="color:var(--amber2)">Objetivos y Resultados Clave</p>
+    <h2 class="h2" style="color:var(--cream)">OKRs del Proyecto</h2>
+    <div class="strike"></div>
+    <div class="og">
+      <div class="okr">
+        <div class="oh"><span class="on">01</span><div><div class="ot">Digitalización del control de asistencia</div><div class="os">Eliminar registros en papel y mejorar el control del personal</div></div></div>
+        <div class="krs">
+          <div class="kr">KR1 — Registrar el 100% de los ingresos y egresos mediante el reloj biométrico.</div>
+          <div class="kr">KR2 — Reducir errores en el registro de asistencia a 0 (ej: horarios mal anotados).</div>
+          <div class="kr">KR3 — Disminuir el tiempo administrativo de control de asistencia.</div>
+        </div>
+      </div>
+      <div class="okr">
+        <div class="oh"><span class="on">02</span><div><div class="ot">Mejora de la imagen institucional</div><div class="os">Posicionar a la empresa en el sector industrial</div></div></div>
+        <div class="krs">
+          <div class="kr">KR1 — Nuevos contactos acceden a la información mediante sitio web o NFC.</div>
+          <div class="kr">KR2 — Tarjetas NFC funcionales en el 100% del equipo comercial.</div>
+          <div class="kr">KR3 — Sitio web publicado con 100% de secciones operativas (empresa, servicios, contacto).</div>
+          <div class="kr">KR4 — Consultas recibidas vía formulario incluyen información relevante (empresa, tipo de trabajo, contacto).</div>
+        </div>
+      </div>
+      <div class="okr">
+        <div class="oh"><span class="on">03</span><div><div class="ot">Implementación tecnológica del sistema</div><div class="os">Todos los componentes funcionando integrados y estables</div></div></div>
+        <div class="krs">
+          <div class="kr">KR1 — Sistema web, base de datos y CRM funcionando sin errores.</div>
+          <div class="kr">KR2 — Integración formulario → BD → respuestas automáticas completada con éxito.</div>
+          <div class="kr">KR3 — Sistema biométrico sincroniza correctamente los registros con MySQL.</div>
+          <div class="kr">KR4 — Redirección NFC funcional en al menos el 95% de los intentos.</div>
+        </div>
+      </div>
+      <div class="okr">
+        <div class="oh"><span class="on">04</span><div><div class="ot">Mejora en la gestión de clientes</div><div class="os">Optimizar comunicación y reducir la carga administrativa</div></div></div>
+        <div class="krs">
+          <div class="kr">KR1 — Reducir el tiempo de respuesta a consultas mediante respuestas automáticas.</div>
+          <div class="kr">KR2 — Registrar el 100% de las consultas recibidas vía formulario en la BD.</div>
+          <div class="kr">KR3 — Automatizar al menos el 80% de las respuestas iniciales a clientes mediante el CRM.</div>
         </div>
       </div>
     </div>
   </div>
+</section>
 
-  <!-- SLIDE 9: IMPACTO -->
-  <div class="slide" data-n="09">
-    <div class="slide-accent"></div>
-    <div class="section-label">Impacto Esperado · Ambos Casos</div>
-    <h2>¿Qué cambia con<br>cada solución?</h2>
-    <div class="cols" style="margin-top:28px;">
-      <div class="col-card">
-        <h4 style="color:var(--ink)">TA-DIN</h4>
-        <ul class="item-list" style="margin-top:12px;">
-          <li><span class="dot"></span><div>Posicionamiento en nichos industriales de alto valor</div></li>
-          <li><span class="dot"></span><div>Procesos alineados con ISO 9001</div></li>
-          <li><span class="dot"></span><div>Imagen corporativa proyectada con tecnología NFC</div></li>
-        </ul>
+<!-- ============ S8 PERFILES + EQUIPO ============ -->
+<section class="slide" id="s8">
+  <div class="inner">
+    <p class="tag" style="color:var(--rust)">Personas y Equipo</p>
+    <h2 class="h2">Perfiles de Usuario y Roles</h2>
+    <div class="strike" style="background:var(--rust)"></div>
+    <div class="sec">Perfiles de Usuario</div>
+    <div class="ug">
+      <div class="uc">
+        <div class="uav">SB</div>
+        <div class="un">Silvana Bravo</div>
+        <div class="ur">Administradora de la empresa</div>
+        <div style="display:flex;flex-direction:column;gap:5px">
+          <div class="uw"><strong>Dispositivo:</strong> PC (trabajo) + celular (fuera de la oficina)</div>
+          <div class="uw"><strong>Frecuencia:</strong> Diaria</div>
+          <div class="uw"><strong>Comodidad tecnológica:</strong> Media</div>
+          <div class="uw"><strong>Acciones:</strong> Gestión de clientes, visualización de consultas, registros de asistencia</div>
+          <div class="uw"><strong>Restricción HCI:</strong> Interfaz clara, sin lenguaje técnico</div>
+        </div>
       </div>
-      <div class="col-card">
-        <h4 style="color:var(--ink)">Training Point</h4>
-        <ul class="item-list" style="margin-top:12px;">
-          <li><span class="dot"></span><div>Tiempo libre devuelto al profesional</div></li>
-          <li><span class="dot"></span><div>Control total del alumno sobre su rendimiento</div></li>
-          <li><span class="dot"></span><div>Negocio escalable y profesionalizado</div></li>
-        </ul>
+      <div class="uc">
+        <div class="uav">EMP</div>
+        <div class="un">Empleados</div>
+        <div class="ur">Usuario básico</div>
+        <div style="display:flex;flex-direction:column;gap:5px">
+          <div class="uw"><strong>Dispositivo:</strong> Reloj biométrico</div>
+          <div class="uw"><strong>Frecuencia:</strong> Diaria (marcado de asistencia)</div>
+          <div class="uw"><strong>Comodidad tecnológica:</strong> Variable</div>
+          <div class="uw"><strong>Acciones:</strong> Registrar ingreso y egreso</div>
+          <div class="uw"><strong>Restricción HCI:</strong> Uso simple, rápido y sin errores</div>
+        </div>
+      </div>
+      <div class="uc">
+        <div class="uav">TEC</div>
+        <div class="un">Técnico Instalador</div>
+        <div class="ur">Milagros Camino · Nicolás Perri</div>
+        <div style="display:flex;flex-direction:column;gap:5px">
+          <div class="uw"><strong>Cuándo actúa:</strong> Instalación inicial y mantenimiento</div>
+          <div class="uw"><strong>Herramientas:</strong> Software del reloj biométrico + servidor local</div>
+          <div class="uw"><strong>Necesidad principal:</strong> Configurar el dispositivo biométrico y conectarlo al sistema</div>
+          <div class="uw"><strong>Restricción clave:</strong> Instalación completa en ≤ 30 minutos</div>
+        </div>
       </div>
     </div>
-    <div class="quote">"Optimizar la gestión es potenciar el entrenamiento."</div>
+    <div class="sec">Roles del Equipo</div>
+    <div class="tg">
+      <div class="tc2"><div class="tav">MN</div><div class="tnm">Mía Niello</div><span class="tro">PM + Frontend</span><div class="tde">Gestiona Gantt, OKRs y control de cambios. Contribuye al desarrollo del frontend del sistema.</div></div>
+      <div class="tc2"><div class="tav">CQ</div><div class="tnm">Catalina Quintana</div><span class="tro">Frontend UX/UI</span><div class="tde">Diseña UX/UI y desarrolla interfaces web responsivas enfocadas en usabilidad.</div></div>
+      <div class="tc2"><div class="tav">TB</div><div class="tnm">Tatiana Bravo</div><span class="tro">Backend</span><div class="tde">Implementa lógica del sistema y APIs. Gestiona comunicación entre frontend y base de datos.</div></div>
+      <div class="tc2"><div class="tav">NP</div><div class="tnm">Nicolás Perri</div><span class="tro">DB + Backend</span><div class="tde">Diseña la base de datos, optimiza consultas SQL y apoya en desarrollo backend.</div></div>
+      <div class="tc2"><div class="tav">MC</div><div class="tnm">Milagros Camino</div><span class="tro">Infra · Seg.</span><div class="tde">Configura infraestructura, integra hardware y asegura la protección de datos.</div></div>
+    </div>
   </div>
+</section>
 
-  <!-- SLIDE 10: CIERRE -->
-  <div class="slide slide-close" data-n="10">
-    <div class="section-label" style="color:rgba(255,255,255,.3); justify-content:center;">Fin de la presentación</div>
-    <h2>¡Muchas gracias!</h2>
-    <p>Por la atención y el tiempo dedicado a revisar nuestro trabajo.</p>
-    <span class="lema">"De la idea al código, del código al impacto."</span>
-    <div class="close-meta">Grupo 3 · 7° Informática A · Instituto Leonardo Murialdo</div>
+<!-- ============ S9 SW + HW ============ -->
+<section class="slide" id="s9">
+  <div class="inner">
+    <p class="tag" style="color:var(--amber2)">Stack</p>
+    <h2 class="h2" style="color:var(--cream)">Interfaz de Software y Hardware</h2>
+    <div class="strike"></div>
+    <div class="dual">
+      <div class="tp">
+        <div class="tpt">Interfaz de Software</div>
+        <div class="sw"><div class="swi">ISW01</div><div class="swn">Frontend Web — Sitio Institucional</div><div class="swt">HTML · CSS · JavaScript</div><div class="swr">Interfaz principal para usuarios. Visualiza información de la empresa y permite completar formularios de contacto.</div></div>
+        <div class="sw"><div class="swi">ISW02</div><div class="swn">Backend</div><div class="swt">PHP (o similar)</div><div class="swr">Procesa solicitudes del frontend, gestiona la lógica del sistema y conecta con la base de datos.</div></div>
+        <div class="sw"><div class="swi">ISW03</div><div class="swn">Base de Datos</div><div class="swt">MySQL</div><div class="swr">Almacena información de clientes, consultas, empleados y registros de asistencia.</div></div>
+        <div class="sw"><div class="swi">ISW04</div><div class="swn">Software del Reloj Biométrico</div><div class="swt">Software propietario del dispositivo</div><div class="swr">Registra huellas/rostros, procesa datos de asistencia y los envía al sistema central.</div></div>
+        <div class="sw"><div class="swi">ISW05</div><div class="swn">Sistema de Gestión NFC</div><div class="swt">Tecnología NFC + URL o app web</div><div class="swr">Permite transferir datos de contacto y redirigir automáticamente al sitio web.</div></div>
+      </div>
+      <div class="tp">
+        <div class="tpt">Requerimientos de Hardware</div>
+        <div class="hw"><div class="hwi">RHW01</div><div class="hwn">PCs — Gestión Administrativa</div><div class="hwd">Computadoras para gestión administrativa y acceso al sistema. Necesidad operativa diaria.</div><span class="hwp">Alta</span></div>
+        <div class="hw"><div class="hwi">RHW02</div><div class="hwn">Reloj Biométrico — iFace 302</div><div class="hwd">Lector de huella y reconocimiento facial. Soluciona el problema de control de asistencia.</div><span class="hwp">Alta</span></div>
+        <div class="hw"><div class="hwi">RHW03</div><div class="hwn">Tarjetas NFC — NTAG215</div><div class="hwd">Para transferencia de datos de contacto. Mejora la forma de comunicación con clientes.</div><span class="hwp">Alta</span></div>
+        <div class="hw"><div class="hwi">RHW04</div><div class="hwn">Conexión a Internet Estable</div><div class="hwd">El sistema depende de una conexión estable para su funcionamiento completo.</div><span class="hwp">Alta</span></div>
+        <div class="hw"><div class="hwi">RHW05</div><div class="hwn">Conexión Reloj ↔ Servidor</div><div class="hwd">El sistema debe permitir la comunicación entre el reloj biométrico y el servidor para la integración.</div><span class="hwp">Alta</span></div>
+      </div>
+    </div>
   </div>
+</section>
 
+<!-- ============ S10 GANTT (placeholder) ============ -->
+<section class="slide" id="s10">
+  <div class="inner">
+    <p class="tag" style="color:var(--rust)">Planificación</p>
+    <h2 class="h2">Cronograma</h2>
+    <div class="strike" style="background:var(--rust)"></div>
+    <div class="ph">
+      <div class="phc"><span>?</span></div>
+      <div class="pht">Diagrama de Gantt</div>
+      <p class="php">El cronograma será proporcionado por el equipo y cargado en este slide.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ S11 PRÓXIMOS PASOS ============ -->
+<section class="slide" id="s11">
+  <div class="inner">
+    <p class="tag">Hoja de Ruta</p>
+    <h2 class="h2">Próximos Pasos</h2>
+    <div class="strike"></div>
+    <div class="sg">
+      <div class="st2"><div class="sn">1</div><div class="sti">Segunda reunión</div><div class="sde">Profundizar en los problemas detectados. Analizar cómo gestionan actualmente clientes y empleados. Relevar herramientas utilizadas y confirmar tipo de consultas y uso de registros.</div><div class="sdu">Duración estimada: 45–60 minutos</div></div>
+      <div class="st2"><div class="sn">2</div><div class="sti">Relevamiento técnico del entorno</div><div class="sde">Analizar el espacio físico para el reloj biométrico. Verificar conexión a internet, ubicación de dispositivos y condiciones de uso. Definir dónde implementar cada componente del sistema.</div><div class="sdu">Visita al sitio físico</div></div>
+      <div class="st2"><div class="sn">3</div><div class="sti">Prueba del sistema biométrico</div><div class="sde">Configurar el iFace 302 y verificar: registro de huella y/o rostro, correcto guardado de datos, funcionamiento de ingresos y egresos. Instalación en ≤ 30 minutos.</div><div class="sdu">Testing inicial</div></div>
+      <div class="st2"><div class="sn">4</div><div class="sti">Desarrollo inicial del sitio web</div><div class="sde">Crear primera versión del sitio institucional con: información de la empresa, sección de servicios y formulario de contacto estructurado.</div><div class="sdu">Sprint 1</div></div>
+      <div class="st2"><div class="sn">5</div><div class="sti">Integración de base de datos y CRM</div><div class="sde">Conectar el formulario con la base de datos. Configurar almacenamiento de clientes y envío de respuestas automáticas vía WhatsApp Business e Instagram.</div><div class="sdu">Sprint 2</div></div>
+      <div class="st2"><div class="sn">6</div><div class="sti">Prueba de integración y validación</div><div class="sde">Verificar que funcionen juntos: Web + Formulario + BD + CRM + Reloj biométrico. Mostrar el sistema funcionando y realizar ajustes antes de la versión final.</div><div class="sdu">Entrega y validación final</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ S12 CIERRE ============ -->
+<section class="slide" id="s12">
+  <div class="inner">
+    <div class="big">¡Gracias<em>!</em></div>
+    <div class="ln"></div>
+    <p class="sub">Proyecto 1 TADIN · Equipo N° 6 · 7mo Informática B</p>
+    <p class="mb">Mía Niello · Catalina Quintana · Tatiana Bravo · Nicolás Perri · Milagros Camino</p>
+    <div class="ft">
+      <div><div class="fl2">Cliente</div><div class="fv">Empresa de Pintura Electrostática</div></div>
+      <div><div class="fl2">Stack</div><div class="fv">Desarrollo de software · Biometría · NFC · CRM</div></div>
+      <div><div class="fl2">Fecha</div><div class="fv">Mayo 2026</div></div>
+    </div>
+  </div>
+</section>
+
+<nav class="nav">
+  <button class="nbtn" id="prev"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg></button>
+  <div class="dots" id="dots"></div>
+  <span class="ncount" id="cnt">1 / 12</span>
+  <button class="nbtn" id="next"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></button>
+</nav>
 </div>
 
-<div class="foot">HTML · CSS · Vanilla JS — Grupo 3 · Instituto Leonardo Murialdo</div>
-
 <script>
-  const slides = document.querySelectorAll('.slide');
-  const obs = new IntersectionObserver(entries => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.classList.add('visible');
-        if (e.target.dataset.n === '08') {
-          setTimeout(() => {
-            document.getElementById('pf').style.width = '63%';
-          }, 300);
-        }
-      }
-    });
-  }, { threshold: 0.1 });
-
-  slides.forEach(s => obs.observe(s));
+(function(){
+  const slides=document.querySelectorAll('.slide');
+  const cnt=document.getElementById('cnt');
+  const dotsEl=document.getElementById('dots');
+  const N=slides.length;
+  let cur=0,busy=false;
+  slides.forEach((_,i)=>{
+    const d=document.createElement('div');
+    d.className='dot'+(i===0?' on':'');
+    d.onclick=()=>go(i);
+    dotsEl.appendChild(d);
+  });
+  function go(to){
+    if(busy||to===cur||to<0||to>=N)return;
+    busy=true;
+    const from=slides[cur],dest=slides[to];
+    dest.style.cssText='transition:none;opacity:0;transform:translateX('+(to>cur?40:-40)+'px)';
+    dest.classList.add('active');
+    requestAnimationFrame(()=>requestAnimationFrame(()=>{
+      dest.style.cssText='';
+      from.classList.add('out');
+      setTimeout(()=>{
+        from.classList.remove('active','out');
+        dest.style.cssText='';
+        busy=false;
+      },530);
+    }));
+    cur=to;
+    cnt.textContent=(cur+1)+' / '+N;
+    document.querySelectorAll('.dot').forEach((d,i)=>d.classList.toggle('on',i===cur));
+  }
+  document.getElementById('next').onclick=()=>go(cur+1);
+  document.getElementById('prev').onclick=()=>go(cur-1);
+  document.addEventListener('keydown',e=>{
+    if(e.key==='ArrowRight'||e.key==='ArrowDown')go(cur+1);
+    if(e.key==='ArrowLeft'||e.key==='ArrowUp')go(cur-1);
+    if(e.key==='f'||e.key==='F')document.fullscreenElement?document.exitFullscreen():document.documentElement.requestFullscreen?.();
+  });
+  let sx=0;
+  document.addEventListener('touchstart',e=>{sx=e.touches[0].clientX;},{passive:true});
+  document.addEventListener('touchend',e=>{
+    const dx=e.changedTouches[0].clientX-sx;
+    if(Math.abs(dx)>45)go(dx<0?cur+1:cur-1);
+  },{passive:true});
+})();
 </script>
-
 </body>
 </html>
