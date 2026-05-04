@@ -544,7 +544,8 @@
   </div>
 </section>
 
-<nav class="nav">
+<div class="nav-zone"></div>
+<nav class="nav" id="nav">
   <button class="nbtn" id="prev"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg></button>
   <div class="dots" id="dots"></div>
   <span class="ncount" id="cnt">1 / 12</span>
@@ -587,9 +588,24 @@
   document.getElementById('next').onclick=()=>go(cur+1);
   document.getElementById('prev').onclick=()=>go(cur-1);
   document.addEventListener('keydown',e=>{
-    if(e.key==='ArrowRight'||e.key==='ArrowDown')go(cur+1);
-    if(e.key==='ArrowLeft'||e.key==='ArrowUp')go(cur-1);
-    if(e.key==='f'||e.key==='F')document.fullscreenElement?document.exitFullscreen():document.documentElement.requestFullscreen?.();
+    if(e.key==='ArrowRight'){e.preventDefault();go(cur+1);return;}
+    if(e.key==='ArrowLeft'){e.preventDefault();go(cur-1);return;}
+    if(e.key==='ArrowDown'||e.key==='ArrowUp'){
+      const inner=slides[cur].querySelector('.inner');
+      if(inner){
+        e.preventDefault();
+        const step=80;
+        inner.scrollBy({top:e.key==='ArrowDown'?step:-step,behavior:'smooth'});
+      }
+      return;
+    }
+    if(e.key==='PageDown'||e.key===' '){e.preventDefault();go(cur+1);return;}
+    if(e.key==='PageUp'){e.preventDefault();go(cur-1);return;}
+    if(e.key==='Home'){e.preventDefault();go(0);return;}
+    if(e.key==='End'){e.preventDefault();go(N-1);return;}
+    if(e.key==='f'||e.key==='F'){
+      document.fullscreenElement?document.exitFullscreen():document.documentElement.requestFullscreen?.();
+    }
   });
   let sx=0;
   document.addEventListener('touchstart',e=>{sx=e.touches[0].clientX;},{passive:true});

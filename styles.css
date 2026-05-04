@@ -45,13 +45,32 @@ html,body{
 .slide.out{opacity:0;transform:translateX(-40px)}
 
 /* ── NAV ── */
+/* Hover zone — invisible strip at the bottom of the screen.
+   When the user moves the mouse over it, the nav bar appears. */
+.nav-zone{
+  position:fixed;
+  bottom:0;left:0;right:0;
+  height:90px;
+  z-index:199;
+  pointer-events:auto;
+}
 .nav{
-  position:fixed;bottom:24px;left:50%;transform:translateX(-50%);
+  position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(20px);
   z-index:200;display:flex;align-items:center;gap:12px;
   background:#1a1208;
   border:1px solid rgba(196,164,107,.3);
   border-radius:40px;padding:8px 18px;
   box-shadow:0 6px 24px rgba(26,18,8,.15);
+  opacity:0;
+  pointer-events:none;
+  transition:opacity .25s ease, transform .25s ease;
+}
+.nav-zone:hover ~ .nav,
+.nav:hover,
+.nav.show{
+  opacity:1;
+  pointer-events:auto;
+  transform:translateX(-50%) translateY(0);
 }
 .nbtn{
   background:none;border:none;cursor:pointer;
