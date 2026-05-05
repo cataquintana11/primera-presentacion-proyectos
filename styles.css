@@ -353,38 +353,83 @@ html,body{
 #s8 .tde{font-size:.92rem;color:var(--ink2);line-height:1.4;font-weight:400}
 
 /* =====================================================
-   S9 — INTERFAZ DE SW + HW
+   S9 — PRESUPUESTO
    ===================================================== */
 #s9{background:var(--cream2);color:var(--ink)}
 #s9 .inner{height:100%;display:flex;flex-direction:column;padding:48px 64px 100px;overflow-y:auto}
-#s9 .h2{color:var(--ink) !important}
-#s9 .tag{color:var(--amber) !important}
-#s9 .dual{display:grid;grid-template-columns:1.1fr 1fr;gap:18px;margin-top:18px;flex:1}
-#s9 .tp{
+#s9 .bdual{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px;flex:1}
+#s9 .bleft{display:flex;flex-direction:column;gap:14px}
+#s9 .bpanel{
   background:var(--paper);border:1px solid rgba(196,164,107,.3);
-  border-radius:var(--r);padding:24px;display:flex;flex-direction:column;gap:10px;overflow:hidden;
+  border-radius:var(--r);padding:20px 24px;display:flex;flex-direction:column;gap:8px;
 }
-#s9 .tpt{
-  font-family:var(--font-display);font-size:.95rem;font-weight:600;
+#s9 .bpt{
+  font-family:var(--font-display);font-size:.9rem;font-weight:600;
   letter-spacing:.16em;text-transform:uppercase;color:var(--rust);
-  padding-bottom:10px;border-bottom:1px solid rgba(196,164,107,.25);
+  padding-bottom:10px;border-bottom:1px solid rgba(196,164,107,.25);margin-bottom:4px;
 }
-#s9 .sw{display:flex;flex-direction:column;gap:3px;padding:11px 0;border-bottom:1px solid rgba(196,164,107,.18)}
-#s9 .sw:last-child{border-bottom:none}
-#s9 .swi{font-family:var(--font-display);font-size:.8rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--amber)}
-#s9 .swn{font-family:var(--font-display);font-size:1.15rem;font-weight:700;color:var(--ink);letter-spacing:-.005em}
-#s9 .swt{font-size:.92rem;color:var(--mid);font-style:italic;font-weight:500}
-#s9 .swr{font-size:.95rem;color:var(--ink2);line-height:1.42;font-weight:400}
-#s9 .hw{display:flex;flex-direction:column;gap:3px;padding:11px 0;border-bottom:1px solid rgba(196,164,107,.18)}
-#s9 .hw:last-child{border-bottom:none}
-#s9 .hwi{font-family:var(--font-display);font-size:.8rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--amber)}
-#s9 .hwn{font-family:var(--font-display);font-size:1.15rem;font-weight:700;color:var(--ink);letter-spacing:-.005em}
-#s9 .hwd{font-size:.95rem;color:var(--ink2);line-height:1.42;font-weight:400}
-#s9 .hwp{
-  display:inline-flex;font-family:var(--font-display);font-size:.78rem;font-weight:600;
-  letter-spacing:.07em;text-transform:uppercase;padding:3px 11px;border-radius:12px;
-  background:rgba(168,75,31,.18);color:var(--rust);margin-top:4px;align-self:flex-start;
+#s9 .brow{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:7px 0;border-bottom:1px solid rgba(196,164,107,.15);
 }
+#s9 .brow:last-of-type{border-bottom:none}
+#s9 .bname{font-size:.98rem;color:var(--ink2);font-weight:400}
+#s9 .bval{font-family:var(--font-display);font-size:1rem;font-weight:700;color:var(--ink)}
+#s9 .bper{font-size:.78rem;font-weight:400;color:var(--mid);margin-left:2px}
+#s9 .bfree{color:var(--mid) !important;font-weight:500 !important}
+#s9 .bsubtotal{
+  display:flex;align-items:center;justify-content:space-between;
+  padding-top:10px;border-top:2px solid rgba(196,164,107,.4);
+  font-family:var(--font-display);font-size:.88rem;font-weight:600;
+  color:var(--mid);text-transform:uppercase;letter-spacing:.08em;margin-top:4px;
+}
+#s9 .bsubtotal span:last-child{font-size:1.1rem;font-weight:700;color:var(--rust)}
+#s9 .bpcard{
+  display:flex;align-items:center;gap:10px;
+  padding:8px 0;border-bottom:1px solid rgba(196,164,107,.15);
+}
+#s9 .bpcard:last-of-type{border-bottom:none}
+#s9 .bpav{
+  width:36px;height:36px;border-radius:50%;flex-shrink:0;
+  background:linear-gradient(135deg,var(--amber),var(--rust));
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--font-display);font-size:.78rem;font-weight:700;color:#fff;
+}
+#s9 .bpinfo{flex:1;display:flex;flex-direction:column;gap:3px}
+#s9 .bpname{font-family:var(--font-display);font-size:.98rem;font-weight:700;color:var(--ink);letter-spacing:-.005em}
+#s9 .bpitems{display:flex;gap:6px;flex-wrap:wrap}
+#s9 .bpitem{
+  display:flex;align-items:center;gap:4px;
+  background:var(--cream2);border:1px solid rgba(196,164,107,.3);
+  border-radius:6px;padding:2px 8px;font-size:.82rem;color:var(--ink2);
+}
+#s9 .bptag{
+  font-family:var(--font-display);font-size:.72rem;font-weight:600;
+  letter-spacing:.08em;text-transform:uppercase;color:var(--amber);
+}
+#s9 .bptotal{
+  font-family:var(--font-display);font-size:1rem;font-weight:700;color:var(--rust);
+  flex-shrink:0;min-width:60px;text-align:right;
+}
+#s9 .btotal{
+  display:flex;align-items:center;justify-content:space-between;
+  background:linear-gradient(135deg,var(--ink),var(--ink2));
+  border-radius:var(--r);padding:16px 28px;margin-top:16px;
+  flex-wrap:wrap;gap:16px;
+}
+#s9 .btl-left{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+#s9 .btl-label{
+  font-family:var(--font-display);font-size:.78rem;font-weight:600;
+  letter-spacing:.12em;text-transform:uppercase;color:rgba(196,164,107,.7);
+}
+#s9 .btl-val{font-family:var(--font-display);font-size:1rem;font-weight:700;color:var(--sand)}
+#s9 .btl-sep{font-size:1.1rem;color:rgba(196,164,107,.5);margin:0 2px}
+#s9 .btl-total{display:flex;flex-direction:column;align-items:flex-end;gap:2px}
+#s9 .btl-tlabel{
+  font-family:var(--font-display);font-size:.78rem;font-weight:600;
+  letter-spacing:.14em;text-transform:uppercase;color:rgba(196,164,107,.7);
+}
+#s9 .btl-tval{font-family:var(--font-display);font-size:1.8rem;font-weight:700;color:#fff;letter-spacing:-.02em}
 
 /* =====================================================
    S10 — GANTT
@@ -545,7 +590,7 @@ html,body{
    RESPONSIVE
    ===================================================== */
 @media(max-width:1100px){
-  #s2 .grid,#s4 .sgrid,#s6 .dual,#s7 .og,#s9 .dual,#s3 .cgrid{grid-template-columns:1fr}
+  #s2 .grid,#s4 .sgrid,#s6 .dual,#s7 .og,#s9 .bdual,#s3 .cgrid{grid-template-columns:1fr}
   #s5 .rgrid{grid-template-columns:1fr}
   #s8 .ug{grid-template-columns:1fr 1fr}
   #s8 .tg{grid-template-columns:repeat(3,1fr)}

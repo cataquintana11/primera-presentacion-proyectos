@@ -329,28 +329,106 @@
   </div>
 </section>
 
-<!-- ============ S9 SW + HW ============ -->
+<!-- ============ S9 PRESUPUESTO ============ -->
 <section class="slide" id="s9">
   <div class="inner">
-    <p class="tag">Stack</p>
-    <h2 class="h2">Interfaz de Software y Hardware</h2>
+    <p class="tag">Viabilidad Económica</p>
+    <h2 class="h2">Presupuesto del Proyecto</h2>
     <div class="strike"></div>
-    <div class="dual">
-      <div class="tp">
-        <div class="tpt">Interfaz de Software</div>
-        <div class="sw"><div class="swi">ISW01</div><div class="swn">Frontend Web — Sitio Institucional</div><div class="swt">HTML · CSS · JavaScript</div><div class="swr">Interfaz principal para usuarios. Visualiza información de la empresa y permite completar formularios de contacto.</div></div>
-        <div class="sw"><div class="swi">ISW02</div><div class="swn">Backend</div><div class="swt">PHP (o similar)</div><div class="swr">Procesa solicitudes del frontend, gestiona la lógica del sistema y conecta con la base de datos.</div></div>
-        <div class="sw"><div class="swi">ISW03</div><div class="swn">Base de Datos</div><div class="swt">MySQL</div><div class="swr">Almacena información de clientes, consultas, empleados y registros de asistencia.</div></div>
-        <div class="sw"><div class="swi">ISW04</div><div class="swn">Software del Reloj Biométrico</div><div class="swt">Software propietario del dispositivo</div><div class="swr">Registra huellas/rostros, procesa datos de asistencia y los envía al sistema central.</div></div>
-        <div class="sw"><div class="swi">ISW05</div><div class="swn">Sistema de Gestión NFC</div><div class="swt">Tecnología NFC + URL o app web</div><div class="swr">Permite transferir datos de contacto y redirigir automáticamente al sitio web.</div></div>
+    <div class="bdual">
+
+      <!-- HW + SW -->
+      <div class="bleft">
+        <div class="bpanel">
+          <div class="bpt">Hardware</div>
+          <div class="brow"><span class="bname">Servidor Web + Dominio (.com)</span><span class="bval">US$ 130<span class="bper">/año</span></span></div>
+          <div class="brow"><span class="bname">Reloj Biométrico iFace 302 (ZKTeco)</span><span class="bval">US$ 85</span></div>
+          <div class="brow"><span class="bname">Tarjetas NFC NTAG215 (×5 unid.)</span><span class="bval">US$ 10</span></div>
+          <div class="brow"><span class="bname">PCs de escritorio + Celulares Samsung</span><span class="bval bfree">Ya disponibles</span></div>
+          <div class="bsubtotal"><span>Subtotal Hardware</span><span>US$ 225</span></div>
+        </div>
+        <div class="bpanel">
+          <div class="bpt">Software</div>
+          <div class="brow"><span class="bname">Frontend — HTML · CSS · JavaScript</span><span class="bval bfree">Gratuito</span></div>
+          <div class="brow"><span class="bname">Backend — PHP</span><span class="bval bfree">Gratuito</span></div>
+          <div class="brow"><span class="bname">Base de Datos — MySQL</span><span class="bval bfree">Gratuito</span></div>
+          <div class="brow"><span class="bname">ZKLib — librería PHP (biométrico)</span><span class="bval bfree">Gratuito</span></div>
+          <div class="bsubtotal"><span>Subtotal Software</span><span style="font-size:1.1rem;font-weight:700;color:var(--mid)">US$ 0</span></div>
+        </div>
       </div>
-      <div class="tp">
-        <div class="tpt">Requerimientos de Hardware</div>
-        <div class="hw"><div class="hwi">RHW01</div><div class="hwn">PCs — Gestión Administrativa</div><div class="hwd">Computadoras para gestión administrativa y acceso al sistema. Necesidad operativa diaria.</div><span class="hwp">Alta</span></div>
-        <div class="hw"><div class="hwi">RHW02</div><div class="hwn">Reloj Biométrico — iFace 302</div><div class="hwd">Lector de huella y reconocimiento facial. Soluciona el problema de control de asistencia.</div><span class="hwp">Alta</span></div>
-        <div class="hw"><div class="hwi">RHW03</div><div class="hwn">Tarjetas NFC — NTAG215</div><div class="hwd">Para transferencia de datos de contacto. Mejora la forma de comunicación con clientes.</div><span class="hwp">Alta</span></div>
-        <div class="hw"><div class="hwi">RHW04</div><div class="hwn">Conexión a Internet Estable</div><div class="hwd">El sistema depende de una conexión estable para su funcionamiento completo.</div><span class="hwp">Alta</span></div>
-        <div class="hw"><div class="hwi">RHW05</div><div class="hwn">Conexión Reloj ↔ Servidor</div><div class="hwd">El sistema debe permitir la comunicación entre el reloj biométrico y el servidor para la integración.</div><span class="hwp">Alta</span></div>
+
+      <!-- Personal -->
+      <div class="bpanel">
+        <div class="bpt">Personal</div>
+        <div class="bpcard">
+          <div class="bpav">MN</div>
+          <div class="bpinfo">
+            <div class="bpname">Mía Niello</div>
+            <div class="bpitems">
+              <div class="bpitem"><span class="bptag">PM</span><span>US$ 37</span></div>
+              <div class="bpitem"><span class="bptag">FE</span><span>US$ 10</span></div>
+            </div>
+          </div>
+          <div class="bptotal">US$ 47</div>
+        </div>
+        <div class="bpcard">
+          <div class="bpav">CQ</div>
+          <div class="bpinfo">
+            <div class="bpname">Catalina Quintana</div>
+            <div class="bpitems">
+              <div class="bpitem"><span class="bptag">FE</span><span>US$ 10</span></div>
+              <div class="bpitem"><span class="bptag">UX/UI</span><span>US$ 30</span></div>
+            </div>
+          </div>
+          <div class="bptotal">US$ 40</div>
+        </div>
+        <div class="bpcard">
+          <div class="bpav">TB</div>
+          <div class="bpinfo">
+            <div class="bpname">Tatiana Bravo</div>
+            <div class="bpitems">
+              <div class="bpitem"><span class="bptag">BE</span><span>US$ 15</span></div>
+            </div>
+          </div>
+          <div class="bptotal">US$ 15</div>
+        </div>
+        <div class="bpcard">
+          <div class="bpav">NP</div>
+          <div class="bpinfo">
+            <div class="bpname">Nicolás Perri</div>
+            <div class="bpitems">
+              <div class="bpitem"><span class="bptag">BE</span><span>US$ 15</span></div>
+            </div>
+          </div>
+          <div class="bptotal">US$ 15</div>
+        </div>
+        <div class="bpcard">
+          <div class="bpav">MC</div>
+          <div class="bpinfo">
+            <div class="bpname">Milagros Camino</div>
+            <div class="bpitems">
+              <div class="bpitem"><span class="bptag">INF/SEG</span><span>US$ 14</span></div>
+            </div>
+          </div>
+          <div class="bptotal">US$ 14</div>
+        </div>
+        <div class="bsubtotal"><span>Subtotal Personal</span><span>US$ 131</span></div>
+      </div>
+
+    </div>
+
+    <!-- Total general -->
+    <div class="btotal">
+      <div class="btl-left">
+        <span class="btl-label">HW</span><span class="btl-val">US$ 225</span>
+        <span class="btl-sep">+</span>
+        <span class="btl-label">SW</span><span class="btl-val" style="color:rgba(196,164,107,.5)">US$ 0</span>
+        <span class="btl-sep">+</span>
+        <span class="btl-label">Personal</span><span class="btl-val">US$ 131</span>
+      </div>
+      <div class="btl-total">
+        <div class="btl-tlabel">Total del Proyecto</div>
+        <div class="btl-tval">US$ 356</div>
       </div>
     </div>
   </div>
